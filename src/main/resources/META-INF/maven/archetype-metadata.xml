@@ -48,18 +48,6 @@
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
-      <directory>.idea/sonarlint</directory>
-      <includes>
-        <include>**/*.pb</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>.idea</directory>
-      <includes>
-        <include>**/*.gitignore</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
       <directory>.github</directory>
       <includes>
         <include>**/*.yml</include>
