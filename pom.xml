@@ -4,7 +4,7 @@
 
   <groupId>io.jexxa</groupId>
   <artifactId>jexxa-archetype</artifactId>
-  <version>2.0.20</version>
+  <version>2.0.21-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>JexxaArchetype</name>
@@ -50,7 +50,7 @@
     <connection>scm:git:https://github.com/jexxa-projects/JexxaArchetype.git</connection>
     <developerConnection>scm:git:https://github.com/jexxa-projects/JexxaArchetype.git</developerConnection>
     <url>https://github.com/jexxa-projects/JexxaArchetype</url>
-    <tag>jexxa-archetype-2.0.20</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
