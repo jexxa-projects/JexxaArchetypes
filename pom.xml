@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.jexxa.jexxatemplate</groupId>
-  <artifactId>jexxatemplate-archetype</artifactId>
+  <groupId>io.jexxa</groupId>
+  <artifactId>jexxa-archetype</artifactId>
   <version>2.0.20-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>jexxatemplate-archetype</name>
+  <name>jexxa-archetype</name>
 
   <build>
     <extensions>
@@ -32,23 +32,23 @@
 
   <url>https://www.jexxa.io</url>
 
-  <developers>
-    <developer>
-      <name>DeveloperName</name>
-    </developer>
-  </developers>
-
   <licenses>
     <license>
-      <name>The Unlicense</name>
-      <url>https://unlicense.org</url>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
+  <developers>
+    <developer>
+      <name>Michael Repplinger</name>
+    </developer>
+  </developers>
+
 
   <scm>
-    <connection>scm:git:https://github.com/jexxa-projects/JexxaTemplate.git</connection>
-    <developerConnection>scm:git:https://github.com/jexxa-projects/JexxaTemplate.git</developerConnection>
-    <url>https://github.com/jexxa-projects/JexxaTemplate</url>
+    <connection>scm:git:https://github.com/jexxa-projects/JexxaArchetype.git</connection>
+    <developerConnection>scm:git:https://github.com/jexxa-projects/JexxaArchetype.git</developerConnection>
+    <url>https://github.com/jexxa-projects/JexxaArchetype</url>
   </scm>
 </project>
