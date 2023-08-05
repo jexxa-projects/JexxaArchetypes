@@ -9,25 +9,6 @@
 
   <name>JexxaArchetype</name>
 
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>3.2.1</version>
-      </extension>
-    </extensions>
-
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-archetype-plugin</artifactId>
-          <version>3.2.1</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-
   <description>JexxaTemplate - Create your own Jexxa Application</description>
 
   <url>https://www.jexxa.io</url>
@@ -53,12 +34,111 @@
     <tag>HEAD</tag>
   </scm>
 
+
+  <properties>
+    <!--version of  maven plugins  -->
+    <gpg.plugin.version>3.1.0</gpg.plugin.version>
+    <maven.clean.plugin>3.3.1</maven.clean.plugin>
+    <maven.compiler.plugin>3.11.0</maven.compiler.plugin>
+    <maven.deploy.plugin>3.1.1</maven.deploy.plugin>
+    <maven.failsafe.plugin>3.1.2</maven.failsafe.plugin>
+    <maven.install.plugin>3.1.1</maven.install.plugin>
+    <maven.jar.plugin>3.3.0</maven.jar.plugin>
+    <maven.resources.plugin>3.3.1</maven.resources.plugin>
+    <maven.site.plugin>4.0.0-M9</maven.site.plugin>
+    <maven.release.plugin>3.0.1</maven.release.plugin>
+    <maven.enforcer.plugin>3.3.0</maven.enforcer.plugin>
+    <maven.versions.plugin>2.16.0</maven.versions.plugin>
+    <project.scm.id>github-Jexxa</project.scm.id>
+
+    <maven.plugin.validation>VERBOSE</maven.plugin.validation>
+
+
+    <!--information for filtered sources  -->
+    <build.timestamp>${maven.build.timestamp}</build.timestamp>
+    <maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ssZ</maven.build.timestamp.format>
+
+    <!-- target/compiler configuration  -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>17</maven.compiler.release>
+  </properties>
+
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.2.1</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.2.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-release-plugin</artifactId>
+          <configuration>
+            <releaseProfiles>sign-artifacts</releaseProfiles>
+            <arguments>-Psign-artifacts</arguments>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+
+  <profiles>
+    <profile>
+      <id>sign-artifacts</id>
+      <activation>
+        <property>
+          <name>sign</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>${gpg.plugin.version}</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
   <distributionManagement>
+    <snapshotRepository>
+      <id>oss.sonatype.org</id>
+      <name>Jexxa snapshot</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <uniqueVersion>true</uniqueVersion>
+    </snapshotRepository>
+   <!-- TODO: set final repository for first public release. For 0.x.x version we still use GitHub
+     <repository>
+      <id>oss.sonatype.org</id>
+      <name>Jexxa Maven Packages</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+      <uniqueVersion>true</uniqueVersion>
+    </repository> -->
     <repository>
       <id>github</id>
       <name>GitHub Packages</name>
       <url>https://maven.pkg.github.com/jexxa-projects/${project.name}</url>
     </repository>
   </distributionManagement>
-
 </project>
