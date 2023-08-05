@@ -42,12 +42,6 @@
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
-      <directory>.github/workflows</directory>
-      <includes>
-        <include>**/*.yml</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
       <directory>.github</directory>
       <includes>
         <include>**/*.yml</include>
