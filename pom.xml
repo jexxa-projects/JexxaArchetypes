@@ -7,7 +7,7 @@
   <version>2.0.20-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>jexxa-archetype</name>
+  <name>JexxaArchetype</name>
 
   <build>
     <extensions>
@@ -51,4 +51,13 @@
     <developerConnection>scm:git:https://github.com/jexxa-projects/JexxaArchetype.git</developerConnection>
     <url>https://github.com/jexxa-projects/JexxaArchetype</url>
   </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/jexxa-projects/${project.name}</url>
+    </repository>
+  </distributionManagement>
+
 </project>
