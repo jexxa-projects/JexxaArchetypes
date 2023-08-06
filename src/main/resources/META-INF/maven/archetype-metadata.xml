@@ -2,6 +2,26 @@
 <archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="jexxa-archetype"
     xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <requiredProperties>
+    <requiredProperty key="project-name" >
+      <defaultValue>JexxaProject</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="groupId" >
+      <defaultValue>com.github.${project-name.toLowerCase()}</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="artifactId" >
+      <defaultValue>${project-name}</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="version" >
+      <defaultValue>0.1.0-SNAPSHOT</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="package" >
+      <defaultValue>${groupId}</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+
+
   <fileSets>
     <fileSet filtered="true" packaged="true" encoding="UTF-8">
       <directory>src/main/java</directory>

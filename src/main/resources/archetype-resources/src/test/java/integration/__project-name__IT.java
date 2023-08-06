@@ -4,10 +4,6 @@
 package ${groupId}.integration;
 
 import io.jexxa.drivingadapter.messaging.JMSConfiguration;
-import ${groupId}.JexxaTemplate;
-import ${groupId}.applicationservice.BookStoreService;
-import ${groupId}.domain.book.BookSoldOut;
-import ${groupId}.domain.book.ISBN13;
 import io.jexxa.jexxatest.JexxaIntegrationTest;
 import io.jexxa.jexxatest.integrationtest.messaging.MessageBinding;
 import io.jexxa.jexxatest.integrationtest.rest.RESTBinding;
@@ -17,10 +13,15 @@ import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.TimeUnit;
 
+import ${groupId}.${project-name};
+import ${groupId}.applicationservice.BookStoreService;
+import ${groupId}.domain.book.BookSoldOut;
+import ${groupId}.domain.book.ISBN13;
+
 import static ${groupId}.domain.book.ISBN13.createISBN;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class JexxaTemplateIT
+class  ${project-name}IT
 {
     static private final String addToStock = "addToStock";
     static private final String amountInStock = "amountInStock";
@@ -35,7 +36,7 @@ class JexxaTemplateIT
     @BeforeAll
     static void initBeforeAll()
     {
-        jexxaIntegrationTest = new JexxaIntegrationTest(JexxaTemplate.class);
+        jexxaIntegrationTest = new JexxaIntegrationTest(${project-name}.class);
         messageBinding = jexxaIntegrationTest.getMessageBinding();
         restBinding = jexxaIntegrationTest.getRESTBinding();
     }
@@ -51,7 +52,7 @@ class JexxaTemplateIT
         var result = boundedContext.contextName();
 
         //Assert
-        assertEquals(JexxaTemplate.class.getSimpleName(), result);
+        assertEquals(${project-name}.class.getSimpleName(), result);
     }
 
     @Test

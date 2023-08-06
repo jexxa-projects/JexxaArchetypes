@@ -6,14 +6,14 @@
   <!-- **************************************************************************** -->
   <!-- TODO (REQUIRED): Change your project name, groupId, artifactId, license ... here.    -->
   <!-- **************************************************************************** -->
-  <name>JexxaTemplate</name>
+  <name>${project-name}</name>
   <groupId>${groupId}</groupId>
   <artifactId>${artifactId}</artifactId>
   <version>${version}</version>
 
   <url>https://www.jexxa.io</url>
 
-  <description>JexxaTemplate - Create your own Jexxa Application</description>
+  <description>${project-name} - Create your own Jexxa Application</description>
   <licenses>
     <license>
       <name>The Unlicense</name>
