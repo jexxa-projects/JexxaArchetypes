@@ -1,17 +1,17 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.applicationservice;
+package ${groupId}.applicationservice;
 
 import io.jexxa.addend.applicationcore.ApplicationService;
-import ${package}.domain.book.Book;
-import ${package}.domain.book.BookNotInStockException;
-import ${package}.domain.book.BookRepository;
-import ${package}.domain.book.ISBN13;
+import ${groupId}.domain.book.Book;
+import ${groupId}.domain.book.BookNotInStockException;
+import ${groupId}.domain.book.BookRepository;
+import ${groupId}.domain.book.ISBN13;
 
 import java.util.List;
 
-import static ${package}.domain.book.Book.newBook;
+import static ${groupId}.domain.book.Book.newBook;
 
 @SuppressWarnings("unused")
 @ApplicationService

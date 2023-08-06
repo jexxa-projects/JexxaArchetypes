@@ -1,9 +1,9 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.architecture;
+package ${groupId}.architecture;
 
-import ${package}.JexxaTemplate;
+import ${groupId}.JexxaTemplate;
 import org.junit.jupiter.api.Test;
 
 import static io.jexxa.jexxatest.architecture.ArchitectureRules.aggregateRules;

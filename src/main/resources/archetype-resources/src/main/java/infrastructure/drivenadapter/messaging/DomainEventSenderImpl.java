@@ -1,12 +1,12 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.infrastructure.drivenadapter.messaging;
+package ${groupId}.infrastructure.drivenadapter.messaging;
 
 import io.jexxa.addend.infrastructure.DrivenAdapter;
 import io.jexxa.infrastructure.messaging.MessageSender;
-import ${package}.domain.book.BookSoldOut;
-import ${package}.domainservice.DomainEventSender;
+import ${groupId}.domain.book.BookSoldOut;
+import ${groupId}.domainservice.DomainEventSender;
 
 import java.util.Objects;
 import java.util.Properties;

@@ -1,13 +1,13 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package};
+package ${groupId};
 
 import io.jexxa.core.JexxaMain;
 import io.jexxa.drivingadapter.rest.RESTfulRPCAdapter;
-import ${package}.applicationservice.BookStoreService;
-import ${package}.domainservice.DomainEventService;
-import ${package}.domainservice.ReferenceLibrary;
+import ${groupId}.applicationservice.BookStoreService;
+import ${groupId}.domainservice.DomainEventService;
+import ${groupId}.domainservice.ReferenceLibrary;
 
 public final class JexxaTemplate
 {

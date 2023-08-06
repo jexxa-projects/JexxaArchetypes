@@ -1,16 +1,16 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.domain.book;
+package ${groupId}.domain.book;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static ${package}.domain.DomainEventPublisher.subscribe;
-import static ${package}.domain.book.Book.newBook;
-import static ${package}.domain.book.ISBN13.createISBN;
+import static ${groupId}.domain.DomainEventPublisher.subscribe;
+import static ${groupId}.domain.book.Book.newBook;
+import static ${groupId}.domain.book.ISBN13.createISBN;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;

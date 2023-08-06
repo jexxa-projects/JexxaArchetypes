@@ -1,11 +1,11 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.domainservice;
+package ${groupId}.domainservice;
 
 
 import io.jexxa.addend.applicationcore.InfrastructureService;
-import ${package}.domain.book.BookSoldOut;
+import ${groupId}.domain.book.BookSoldOut;
 
 @InfrastructureService
 public interface DomainEventSender

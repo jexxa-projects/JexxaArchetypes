@@ -1,13 +1,13 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.integration;
+package ${groupId}.integration;
 
 import io.jexxa.drivingadapter.messaging.JMSConfiguration;
-import ${package}.JexxaTemplate;
-import ${package}.applicationservice.BookStoreService;
-import ${package}.domain.book.BookSoldOut;
-import ${package}.domain.book.ISBN13;
+import ${groupId}.JexxaTemplate;
+import ${groupId}.applicationservice.BookStoreService;
+import ${groupId}.domain.book.BookSoldOut;
+import ${groupId}.domain.book.ISBN13;
 import io.jexxa.jexxatest.JexxaIntegrationTest;
 import io.jexxa.jexxatest.integrationtest.messaging.MessageBinding;
 import io.jexxa.jexxatest.integrationtest.rest.RESTBinding;
@@ -17,7 +17,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static ${package}.domain.book.ISBN13.createISBN;
+import static ${groupId}.domain.book.ISBN13.createISBN;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JexxaTemplateIT

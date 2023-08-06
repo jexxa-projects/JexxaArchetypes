@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.domain.book;
+package ${groupId}.domain.book;
 
 import io.jexxa.addend.applicationcore.Aggregate;
 import io.jexxa.addend.applicationcore.AggregateFactory;
@@ -9,8 +9,8 @@ import io.jexxa.addend.applicationcore.AggregateID;
 
 import java.util.UUID;
 
-import static ${package}.domain.DomainEventPublisher.publish;
-import static ${package}.domain.book.BookSoldOut.bookSoldOut;
+import static ${groupId}.domain.DomainEventPublisher.publish;
+import static ${groupId}.domain.book.BookSoldOut.bookSoldOut;
 
 @Aggregate
 public final class Book

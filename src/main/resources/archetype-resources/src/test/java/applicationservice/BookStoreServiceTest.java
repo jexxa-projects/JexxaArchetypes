@@ -1,21 +1,21 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.applicationservice;
+package ${groupId}.applicationservice;
 
 import io.jexxa.addend.applicationcore.DomainService;
-import ${package}.JexxaTemplate;
-import ${package}.domain.book.BookNotInStockException;
-import ${package}.domain.book.BookRepository;
-import ${package}.domain.book.BookSoldOut;
-import ${package}.domain.book.ISBN13;
-import ${package}.domainservice.DomainEventSender;
+import ${groupId}.JexxaTemplate;
+import ${groupId}.domain.book.BookNotInStockException;
+import ${groupId}.domain.book.BookRepository;
+import ${groupId}.domain.book.BookSoldOut;
+import ${groupId}.domain.book.ISBN13;
+import ${groupId}.domainservice.DomainEventSender;
 import io.jexxa.jexxatest.JexxaTest;
 import io.jexxa.jexxatest.infrastructure.messaging.recording.MessageRecorder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static ${package}.domain.book.ISBN13.createISBN;
+import static ${groupId}.domain.book.ISBN13.createISBN;
 import static io.jexxa.jexxatest.JexxaTest.getJexxaTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

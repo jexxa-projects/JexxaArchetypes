@@ -1,14 +1,14 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.infrastructure.drivenadapter.persistence;
+package ${groupId}.infrastructure.drivenadapter.persistence;
 
 
 import io.jexxa.addend.infrastructure.DrivenAdapter;
 import io.jexxa.infrastructure.persistence.repository.IRepository;
-import ${package}.domain.book.Book;
-import ${package}.domain.book.ISBN13;
-import ${package}.domain.book.BookRepository;
+import ${groupId}.domain.book.Book;
+import ${groupId}.domain.book.ISBN13;
+import ${groupId}.domain.book.BookRepository;
 
 import java.util.List;
 import java.util.Optional;
