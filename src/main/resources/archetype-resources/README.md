@@ -1,17 +1,18 @@
+#set($hash = '#')
 [![Maven Test Build](https://github.com/jexxa-projects/JexxaTemplate/actions/workflows/mavenBuild.yml/badge.svg)](https://github.com/jexxa-projects/JexxaTemplate/actions/workflows/mavenBuild.yml)
 [![New Release](https://github.com/jexxa-projects/JexxaTemplate/actions/workflows/newRelease.yml/badge.svg)](https://github.com/jexxa-projects/JexxaTemplate/actions/workflows/newRelease.yml)
 
-# ${project-name}
+${hash} ${name}
 This template can be used to start your own Jexxa application 
 
-## Requirements
+${hash}${hash}  Requirements
 
 *   Java 17+ installed
 *   IDE with maven support 
 *   [Optional] Docker or Kubernetes if you want to run your application in a container. See [here](README-CICD.md) for more information.   
 *   [Optional] A locally running [developer stack](deploy/developerStack.yml) providing a Postgres database, ActiveMQ broker, and Swagger-UI 
 
-## Features
+${hash}${hash}  Features
 
 *   Build your first Jexxa-project as self-contained jar and/or docker image
     
@@ -23,8 +24,8 @@ This template can be used to start your own Jexxa application
     *   [Usage of Aggregates](src/test/java/io/jexxa/jexxatemplate/architecture/ArchitectureTest.java) to validate that your business logic is not exposed
 
 *   Predefined CI/CD pipeline for GitHub including automatic dependency updates 
- 
-## Create new Project from Template
+
+${hash}${hash} Create new Project from Template
 
 *   In GitHub press `Use this template` (requires GitHub account) or fork the project. If you do not have a GitHub account you can just clone the repository. 
 
@@ -32,7 +33,7 @@ This template can be used to start your own Jexxa application
     *   Project name should be written in camel case notation, such as `JexxaTemplate`
     *   Project name of the repository is equal to the name of the java application
 
-## Build the Project
+${hash}${hash} Build the Project
 
 *   Checkout the new project in your favorite IDE
 
@@ -64,16 +65,16 @@ This template can be used to start your own Jexxa application
     ```
 *   [Optional] See [here](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/README-OPENAPI.md#explore-openapi) how to use the application with Swagger-UI
 
-## Start Developing your Project
+${hash}${hash} Start Developing your Project
 
-### Adjust Project Name
+${hash}${hash}${hash} Adjust Project Name
 
 Rename `JexxaTemplate` to your own applications name, as described [here](README-ProjectName.md). 
 
-### Set up the CI/CD Pipeline  
+${hash}${hash}${hash} Set up the CI/CD Pipeline  
 
 In order to continuously build and deploy your application, configure your CI/CD pipeline as described [here](README-CICD.md).
 
-### Cleanup Readme
+${hash}${hash}${hash} Cleanup Readme
 
 After successfully set up your new project, you should clean up the text of README as described [here](https://www.makeareadme.com)    

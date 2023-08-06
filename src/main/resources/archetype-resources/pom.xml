@@ -6,14 +6,14 @@
   <!-- **************************************************************************** -->
   <!-- TODO (REQUIRED): Change your project name, groupId, artifactId, license ... here.    -->
   <!-- **************************************************************************** -->
-  <name>${project-name}</name>
-  <groupId>${groupId}</groupId>
-  <artifactId>${artifactId}</artifactId>
+  <name>${name}</name>
+  <groupId>${groupId.toLowerCase()}</groupId>
+  <artifactId>${artifactId.toLowerCase()}</artifactId>
   <version>${version}</version>
 
   <url>https://www.jexxa.io</url>
 
-  <description>${project-name} - Create your own Jexxa Application</description>
+  <description>${name} - Create your own Jexxa Application</description>
   <licenses>
     <license>
       <name>The Unlicense</name>
@@ -101,8 +101,10 @@
     <maven.exec.plugin>3.1.0</maven.exec.plugin>
 
   <!-- command to start the application for integration tests -->
-  <context.command.start>-javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec,port=6300,output=tcpserver
-        -jar -Dio.jexxa.config.import=./src/test/resources/jexxa-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar</context.command.start>
+  <context.command.start>
+        -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec,port=6300,output=tcpserver
+        -jar -Dio.jexxa.config.import=./src/test/resources/jexxa-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar
+  </context.command.start>
 </properties>
 
   <!-- ********************************************************* -->
@@ -500,12 +502,16 @@
             </tags>
           </to>
           <container>
-            <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+            <creationTime>
+              USE_CURRENT_TIMESTAMP
+            </creationTime>
             <ports>
               <port>${docker.http.port}</port>
               <port>${docker.https.port}</port>
             </ports>
-            <user>${docker.user}</user>
+            <user>
+              ${docker.user}
+            </user>
           </container>
         </configuration>
       </plugin>
@@ -682,7 +688,9 @@
                 <configuration>
                   <executable>${java.home}/bin/java</executable>
                   <async>true</async>
-                  <commandlineArgs>${context.command.start}</commandlineArgs>
+                  <commandlineArgs>
+                    ${context.command.start}
+                  </commandlineArgs>
                 </configuration>
               </execution>
             </executions>
@@ -696,6 +704,7 @@
     <profile>     <!-- add tag developer image -->
       <id>localDockerImage</id>
       <activation>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
         <dockerTag>developerImage</dockerTag>

@@ -9,11 +9,11 @@ import ${groupId}.applicationservice.BookStoreService;
 import ${groupId}.domainservice.DomainEventService;
 import ${groupId}.domainservice.ReferenceLibrary;
 
-public final class ${project-name}
+public final class ${name}
 {
     public static void main(String[] args)
     {
-        var jexxaMain = new JexxaMain(${project-name}.class);
+        var jexxaMain = new JexxaMain(${name}.class);
 
         jexxaMain
                 .bootstrap(ReferenceLibrary.class).and()       // Bootstrap latest book via ReferenceLibrary

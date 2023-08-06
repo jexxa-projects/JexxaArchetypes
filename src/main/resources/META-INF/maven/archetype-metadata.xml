@@ -4,14 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <requiredProperties>
-    <requiredProperty key="project-name" >
-      <defaultValue>JexxaProject</defaultValue>
+    <requiredProperty key="name" >
     </requiredProperty>
     <requiredProperty key="groupId" >
-      <defaultValue>com.github.${project-name.toLowerCase()}</defaultValue>
+      <defaultValue>com.github.${name.toLowerCase()}</defaultValue>
     </requiredProperty>
     <requiredProperty key="artifactId" >
-      <defaultValue>${project-name}</defaultValue>
+      <defaultValue>${name}</defaultValue>
     </requiredProperty>
     <requiredProperty key="version" >
       <defaultValue>0.1.0-SNAPSHOT</defaultValue>
@@ -73,14 +72,18 @@
         <include>**/*.yml</include>
       </includes>
     </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>README.md</include>
+      </includes>
+    </fileSet>
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
         <include>.gitignore</include>
         <include>LICENSE</include>
         <include>README-CICD.md</include>
-        <include>README-ProjectName.md</include>
-        <include>README.md</include>
       </includes>
     </fileSet>
   </fileSets>
