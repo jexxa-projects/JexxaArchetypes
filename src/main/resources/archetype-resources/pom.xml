@@ -3,17 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
 
-  <!-- **************************************************************************** -->
-  <!-- TODO (REQUIRED): Change your project name, groupId, artifactId, license ... here.    -->
-  <!-- **************************************************************************** -->
   <name>${name}</name>
   <groupId>${groupId.toLowerCase()}</groupId>
   <artifactId>${artifactId.toLowerCase()}</artifactId>
   <version>${version}</version>
 
-  <url>https://www.jexxa.io</url>
+  <url>${vcs-repository}</url>
 
-  <description>${name} - Create your own Jexxa Application</description>
+  <description>${name} - Your Jexxa Application</description>
   <licenses>
     <license>
       <name>The Unlicense</name>
@@ -23,39 +20,32 @@
   </licenses>
   <developers>
     <developer>
-      <name>DeveloperName</name>  <!-- TODO (REQUIRED): Change developer name.       -->
+      <name>${scm-developer}</name>
     </developer>
   </developers>
 
-  <!-- **************************************************************************** -->
-  <!-- TODO (REQUIRED): Change the scm section to include correct repository.       -->
-  <!-- **************************************************************************** -->
   <scm>
-    <connection>scm:git:https://github.com/jexxa-projects/JexxaTemplate.git</connection>
-    <url>https://github.com/jexxa-projects/JexxaTemplate</url>
-    <developerConnection>scm:git:https://github.com/jexxa-projects/JexxaTemplate.git</developerConnection>
+    <connection>scm:git:${vcs-repository}.git</connection>
+    <url>${vcs-repository}</url>
+    <developerConnection>scm:git:${vcs-repository}.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
   <properties>
-    <!-- **************************************************************************** -->
-    <!-- TODO (REQUIRED): Change the repository to upload your image.                 -->
-    <!-- **************************************************************************** -->
-    <image.repository.root>ghcr.io/jexxa-projects</image.repository.root>
-    <test.coverage.minimum>0.00</test.coverage.minimum>     <!-- Minimum Test coverage in %-->
-
-    <!-- ************************************************************* -->
-    <!-- TODO (OPTIONAL): Change your project specific settings here   -->
-    <!-- ************************************************************* -->
     <main.class>${project.groupId}.${project.name}</main.class>
+    <!-- target/compiler configuration  -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>17</maven.compiler.release>
+
+    <!-- Minimum Test coverage in %-->
+    <test.coverage.minimum>0.00</test.coverage.minimum>
+
+    <!-- Dettings for docker image -->
     <docker.http.port>7500</docker.http.port>
     <docker.https.port>8081</docker.https.port>
     <docker.base.image>eclipse-temurin:17-alpine</docker.base.image>
     <docker.user>guest</docker.user> <!-- Defines the user running the application inside the container. Note: This user must be already created inside the base image -->
-
-    <!-- target/compiler configuration  -->
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release>
+    <image.repository.root>${container-registry}</image.repository.root>
 
     <!-- version of dependencies -->
     <jexxa.release.version>6.1.4</jexxa.release.version>
@@ -70,7 +60,6 @@
     <junit.jupiter.params.version>5.10.0</junit.jupiter.params.version>
     <awaitility.version>4.2.0</awaitility.version>
     <unirest.java.version>3.14.5</unirest.java.version>
-
 
     <!-- server-name used in mavens settings.xml to find to your repository credentials -->
     <project.scm.id>github</project.scm.id>
@@ -107,11 +96,8 @@
   </context.command.start>
 </properties>
 
-  <!-- ********************************************************* -->
-  <!-- TODO (OPTIONAL): Add additional dependencies if required  -->
-  <!-- ********************************************************* -->
   <dependencies>
-    <!-- dependencies for application core -->
+    <!-- Dependencies required for application -->
     <dependency>
       <groupId>io.jexxa</groupId>
       <artifactId>jexxa-web</artifactId>
@@ -143,9 +129,7 @@
     </dependency>
 
 
-    <!-- *************************************** -->
-    <!-- TODO (OPTIONAL): dependencies for tests -->
-    <!-- *************************************** -->
+    <!-- Dependencies required for tests -->
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-launcher</artifactId>

@@ -1,10 +1,23 @@
 #set($hash = '#')
-[![Maven Test Build](https://github.com/jexxa-projects/JexxaTemplate/actions/workflows/mavenBuild.yml/badge.svg)](https://github.com/jexxa-projects/JexxaTemplate/actions/workflows/mavenBuild.yml)
-[![New Release](https://github.com/jexxa-projects/JexxaTemplate/actions/workflows/newRelease.yml/badge.svg)](https://github.com/jexxa-projects/JexxaTemplate/actions/workflows/newRelease.yml)
+[![Maven Test Build](${vcs-repository}/actions/workflows/mavenBuild.yml/badge.svg)](${vcs-repository}/actions/workflows/mavenBuild.yml)
+[![New Release](${vcs-repository}/actions/workflows/newRelease.yml/badge.svg)](${vcs-repository}/actions/workflows/newRelease.yml)
 
 ${hash} ${name}
-This template can be used to start your own Jexxa application 
+This template can be used to start your own Jexxa application
 
+${hash}${hash} Init Project on GitHub
+
+* Create Repository via following [URL](https://github.com/new)
+* On local command line enter project directory and enter
+    ```
+    git init
+    git add .
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin ${vcs-repository}
+    ```
+* Push changes to your GitHub repo using your favorite IDE.
+ 
 ${hash}${hash}  Requirements
 
 *   Java 17+ installed

@@ -4,22 +4,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
   <requiredProperties>
-    <requiredProperty key="name" >
-    </requiredProperty>
-    <requiredProperty key="groupId" >
-      <defaultValue>com.github.${name.toLowerCase()}</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="artifactId" >
-      <defaultValue>${name}</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="version" >
-      <defaultValue>0.1.0-SNAPSHOT</defaultValue>
-    </requiredProperty>
-    <requiredProperty key="package" >
-      <defaultValue>${groupId}</defaultValue>
-    </requiredProperty>
+    <requiredProperty key="name" >              </requiredProperty>
+    <requiredProperty key="groupId" >           <defaultValue>com.github.${name.toLowerCase()}</defaultValue> </requiredProperty>
+    <requiredProperty key="artifactId" >        <defaultValue>${name}</defaultValue> </requiredProperty>
+    <requiredProperty key="version" >           <defaultValue>0.1.0-SNAPSHOT</defaultValue> </requiredProperty>
+    <requiredProperty key="package" >           <defaultValue>${groupId}</defaultValue> </requiredProperty>
+    <requiredProperty key="scm-developer" >     </requiredProperty>
+    <requiredProperty key="github-account">     </requiredProperty>
+    <requiredProperty key="vcs-repository">     <defaultValue>https://github.com/${github-account}/${name}</defaultValue></requiredProperty>
+    <requiredProperty key="container-registry"> <defaultValue>ghcr.io/${github-account}</defaultValue></requiredProperty>
   </requiredProperties>
-
 
   <fileSets>
     <fileSet filtered="true" packaged="true" encoding="UTF-8">
