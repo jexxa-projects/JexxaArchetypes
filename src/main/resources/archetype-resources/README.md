@@ -4,39 +4,13 @@
 
 ${hash} ${name}
 This template can be used to start your own Jexxa application
-
-${hash}${hash} Init Project on GitHub
-
-* Create Repository via following [URL](https://github.com/new)
-* On local command line enter project directory and enter
-    ```
-    git init
-    git add .
-    git commit -m "first commit"
-    git branch -M main
-    git remote add origin ${vcs-repository}
-    ```
-* Push changes to your GitHub repo using your favorite IDE.
  
 ${hash}${hash}  Requirements
 
 *   Java 17+ installed
 *   IDE with maven support 
-*   [Optional] Docker or Kubernetes if you want to run your application in a container. See [here](README-CICD.md) for more information.   
+*   [Optional] Docker or Kubernetes if you want to run your application in a container. See [here](README-GitHub.md) for more information.   
 *   [Optional] A locally running [developer stack](deploy/developerStack.yml) providing a Postgres database, ActiveMQ broker, and Swagger-UI 
-
-${hash}${hash}  Features
-
-*   Build your first Jexxa-project as self-contained jar and/or docker image
-    
-*   Template for [Unit-](src/test/java/${groupId.replace('.', '/')}/domain/book/BookTest.java), [Stub-](src/test/java/${groupId.replace('.', '/')}/applicationservice/BookStoreServiceTest.java) and [Integration tests](src/test/java/${groupId.replace('.', '/')}/integration/${name}IT.java)
-
-*   Predefined architectural tests for: 
-    *   [Pattern Language](src/test/java/${groupId.replace('.', '/')}/architecture/ArchitectureTest.java) to validate the correct annotation of your application using project [Addend](http://addend.jexxa.io/) 
-    *   [Ports&Adapters Architecture](src/test/java/${groupId.replace('.', '/')}/architecture/ArchitectureTest.java) to validate dependencies between packages of your application
-    *   [Usage of Aggregates](src/test/java/${groupId.replace('.', '/')}/architecture/ArchitectureTest.java) to validate that your business logic is not exposed
-
-*   Predefined CI/CD pipeline for GitHub including automatic dependency updates 
 
 ${hash}${hash} Build the Project
 
@@ -72,9 +46,9 @@ ${hash}${hash} Build the Project
 
 ${hash}${hash} Start Developing your Project
 
-${hash}${hash}${hash} Set up the CI/CD Pipeline  
+${hash}${hash}${hash} Set up your project on GitHub  
 
-In order to continuously build and deploy your application, configure your CI/CD pipeline as described [here](README-CICD.md).
+In order to continuously build and deploy your application, we recommend using GitHub as described [here](README-GitHub.md).
 
 ${hash}${hash}${hash} Cleanup Readme
 
