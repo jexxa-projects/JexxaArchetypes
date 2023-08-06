@@ -16,22 +16,14 @@ ${hash}${hash}  Features
 
 *   Build your first Jexxa-project as self-contained jar and/or docker image
     
-*   Template for [Unit-](src/test/java/io/jexxa/jexxatemplate/domain/book/BookTest.java), [Stub-](src/test/java/io/jexxa/jexxatemplate/applicationservice/BookStoreServiceTest.java) and [Integration tests](src/test/java/io/jexxa/jexxatemplate/integration/JexxaTemplateIT.java)
+*   Template for [Unit-](src/test/java/${groupId.replace('.', '/')}/domain/book/BookTest.java), [Stub-](src/test/java/${groupId.replace('.', '/')}/applicationservice/BookStoreServiceTest.java) and [Integration tests](src/test/java/${groupId.replace('.', '/')}/integration/${name}IT.java)
 
 *   Predefined architectural tests for: 
-    *   [Pattern Language](src/test/java/io/jexxa/jexxatemplate/architecture/ArchitectureTest.java) to validate the correct annotation of your application using project [Addend](http://addend.jexxa.io/) 
-    *   [Ports&Adapters Architecture](src/test/java/io/jexxa/jexxatemplate/architecture/ArchitectureTest.java) to validate dependencies between packages of your application
-    *   [Usage of Aggregates](src/test/java/io/jexxa/jexxatemplate/architecture/ArchitectureTest.java) to validate that your business logic is not exposed
+    *   [Pattern Language](src/test/java/${groupId.replace('.', '/')}/architecture/ArchitectureTest.java) to validate the correct annotation of your application using project [Addend](http://addend.jexxa.io/) 
+    *   [Ports&Adapters Architecture](src/test/java/${groupId.replace('.', '/')}/architecture/ArchitectureTest.java) to validate dependencies between packages of your application
+    *   [Usage of Aggregates](src/test/java/${groupId.replace('.', '/')}/architecture/ArchitectureTest.java) to validate that your business logic is not exposed
 
 *   Predefined CI/CD pipeline for GitHub including automatic dependency updates 
-
-${hash}${hash} Create new Project from Template
-
-*   In GitHub press `Use this template` (requires GitHub account) or fork the project. If you do not have a GitHub account you can just clone the repository. 
-
-*   Enter a `project name` for the repository. This template uses following convention:
-    *   Project name should be written in camel case notation, such as `JexxaTemplate`
-    *   Project name of the repository is equal to the name of the java application
 
 ${hash}${hash} Build the Project
 
@@ -41,14 +33,14 @@ ${hash}${hash} Build the Project
     ```shell
     mvn clean install -P '!integrationTests'
 
-    java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-local.properties" target/jexxatemplate-jar-with-dependencies.jar
+    java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-local.properties" target/${artifactId}-jar-with-dependencies.jar
     ```
 
 *   [Optional] **With** running [developer stack](deploy/developerStack.yml):
     ```shell
     mvn clean install
     
-    java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-test.properties" target/jexxatemplate-jar-with-dependencies.jar
+    java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-test.properties" target/${artifactId}-jar-with-dependencies.jar
     ```
 
 *   Now you can use `curl` to access your application, or open this [http://localhost:7503/BookStoreService/getBooks](http://localhost:7503/BookStoreService/getBooks) in your browser:
@@ -66,10 +58,6 @@ ${hash}${hash} Build the Project
 *   [Optional] See [here](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/README-OPENAPI.md#explore-openapi) how to use the application with Swagger-UI
 
 ${hash}${hash} Start Developing your Project
-
-${hash}${hash}${hash} Adjust Project Name
-
-Rename `JexxaTemplate` to your own applications name, as described [here](README-ProjectName.md). 
 
 ${hash}${hash}${hash} Set up the CI/CD Pipeline  
 
