@@ -92,10 +92,10 @@
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
-          <configuration>
+         <!-- <configuration>
             <releaseProfiles>sign-artifacts</releaseProfiles>
             <arguments>-Psign-artifacts</arguments>
-          </configuration>
+          </configuration> -->
         </plugin>
       </plugins>
     </pluginManagement>
