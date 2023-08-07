@@ -1,8 +1,8 @@
 #set($hash = '#')
-[![Maven Test Build](${vcs-repository}/actions/workflows/mavenBuild.yml/badge.svg)](${vcs-repository}/actions/workflows/mavenBuild.yml)
-[![New Release](${vcs-repository}/actions/workflows/newRelease.yml/badge.svg)](${vcs-repository}/actions/workflows/newRelease.yml)
+[![Maven Test Build](${vcsRepository}/actions/workflows/mavenBuild.yml/badge.svg)](${vcsRepository}/actions/workflows/mavenBuild.yml)
+[![New Release](${vcsRepository}/actions/workflows/newRelease.yml/badge.svg)](${vcsRepository}/actions/workflows/newRelease.yml)
 
-${hash} ${name}
+${hash} ${projectName}
 This template can be used to start your own Jexxa application
  
 ${hash}${hash}  Requirements

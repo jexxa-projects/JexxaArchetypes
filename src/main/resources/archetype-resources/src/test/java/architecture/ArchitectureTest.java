@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${groupId}.architecture;
 
-import ${groupId}.${name};
+import ${groupId}.${projectName};
 import org.junit.jupiter.api.Test;
 
 import static io.jexxa.jexxatest.architecture.ArchitectureRules.aggregateRules;
@@ -22,7 +22,7 @@ class ArchitectureTest {
     @Test
     void validatePortsAndAdapters()
     {
-        portsAndAdapters(${name}.class)
+        portsAndAdapters(${projectName}.class)
                 // Add all packages providing driven adapter
                 .addDrivenAdapterPackage("persistence")
                 .addDrivenAdapterPackage("messaging")
@@ -36,12 +36,12 @@ class ArchitectureTest {
     @Test
     void validatePatternLanguage()
     {
-        patternLanguage(${name}.class).validate();
+        patternLanguage(${projectName}.class).validate();
     }
 
     @Test
     void validateAggregateRules()
     {
-        aggregateRules(${name}.class).validate();
+        aggregateRules(${projectName}.class).validate();
     }
 }

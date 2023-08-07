@@ -75,6 +75,29 @@
         <version>${maven.archetype.packaging}</version>
       </extension>
     </extensions>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.2.5</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
 
     <pluginManagement>
       <plugins>
@@ -92,10 +115,32 @@
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
-         <!-- <configuration>
-            <releaseProfiles>sign-artifacts</releaseProfiles>
-            <arguments>-Psign-artifacts</arguments>
-          </configuration> -->
+          <version>${maven.release.plugin}</version>
+
+          <!-- <configuration>
+             <releaseProfiles>sign-artifacts</releaseProfiles>
+             <arguments>-Psign-artifacts</arguments>
+           </configuration> -->
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>3.3.0</version>
+          <executions>
+            <execution>
+              <id>enforce-maven</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireMavenVersion>
+                    <version>3.2.5</version>
+                  </requireMavenVersion>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>

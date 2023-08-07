@@ -21,8 +21,11 @@ mvn clean install
 ```
 * Build Project Template 
 ```bash
-mvn archetype:generate \
--DarchetypeGroupId=io.jexxa \
--DarchetypeArtifactId=jexxa-archetype \
--DarchetypeVersion=0.1.1-SNAPSHOT
+mvn -B archetype:generate \
+  -DarchetypeGroupId=io.jexxa \
+  -DarchetypeArtifactId=jexxa-archetype \
+  -DarchetypeVersion=0.1.2-SNAPSHOT \
+  -DprojectName=JexxaProject \
+  -DgroupId=com.github.jexxaproject \
+  -DgithubAccount=jexxa-projects
 ```

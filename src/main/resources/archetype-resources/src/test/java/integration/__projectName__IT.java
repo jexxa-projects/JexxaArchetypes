@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import ${groupId}.${name};
+import ${groupId}.${projectName};
 import ${groupId}.applicationservice.BookStoreService;
 import ${groupId}.domain.book.BookSoldOut;
 import ${groupId}.domain.book.ISBN13;
@@ -21,7 +21,7 @@ import ${groupId}.domain.book.ISBN13;
 import static ${groupId}.domain.book.ISBN13.createISBN;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class  ${name}IT
+class  ${projectName}IT
 {
     static private final String addToStock = "addToStock";
     static private final String amountInStock = "amountInStock";
@@ -36,7 +36,7 @@ class  ${name}IT
     @BeforeAll
     static void initBeforeAll()
     {
-        jexxaIntegrationTest = new JexxaIntegrationTest(${name}.class);
+        jexxaIntegrationTest = new JexxaIntegrationTest(${projectName}.class);
         messageBinding = jexxaIntegrationTest.getMessageBinding();
         restBinding = jexxaIntegrationTest.getRESTBinding();
     }
@@ -52,7 +52,7 @@ class  ${name}IT
         var result = boundedContext.contextName();
 
         //Assert
-        assertEquals(${name}.class.getSimpleName(), result);
+        assertEquals(${projectName}.class.getSimpleName(), result);
     }
 
     @Test

@@ -4,7 +4,7 @@ ${hash} Setup your Project on GitHub
 ${hash}${hash} Init GitHub repository
 
 * Create Repository via following [URL](https://github.com/new)
-  * Set reposotiry name to ${name} 
+  * Set reposotiry name to ${projectName} 
   * Set visibility of the project. Note: In order to use GitHub's container registry ghcr, make your repository public or ensure that you have billing plan including access to ghcr. 
   * Set owner for this project which is either your account, or one of your organizations
 * On local command line enter project directory and enter
@@ -13,7 +13,7 @@ ${hash}${hash} Init GitHub repository
     git add .
     git commit -m "first commit"
     git branch -M main
-    git remote add origin ${vcs-repository}
+    git remote add origin ${vcsRepository}
     ```
 * Push changes to your GitHub repo using your favorite IDE.
 
@@ -37,21 +37,21 @@ ${hash}${hash} Using GitHub actions
 
 We provide following GitHub actions that are either started manually or automatically. To validate the actions start all actions with start option `manually`:  
 
-*   [mavenBuild.yml](${vcs-repository}/actions/workflows/mavenBuild.yml):
+*   [mavenBuild.yml](${vcsRepository}/actions/workflows/mavenBuild.yml):
     *   __Description:__ Builds the project after each push
     *   __Started:__ Automatically and manually   
 
-*   [newRelease.yml](${vcs-repository}/actions/workflows/newRelease.yml):
+*   [newRelease.yml](${vcsRepository}/actions/workflows/newRelease.yml):
     *   __Description:__ Create a new release using maven via GitHub web page
     *   __Started:__ Manually only
     *   Please note that the first run might fail, because the link to the ghcr.io repository is automatically created, first time you try to access it. So, please run this action twice, as soon as you created the repo.
 
 
-*   [autoMerge.yml](${vcs-repository}/actions/workflows/autoMerge.yml):
+*   [autoMerge.yml](${vcsRepository}/actions/workflows/autoMerge.yml):
     *   __Description:__ Automatic merge of dependency updates with new patch or minor versions of dependencies from Dependabot. See https://github.com/ridedott/merge-me-action for more information.
     *   __Started:__ Automatically only
 
-*   [dependabot.yml](${vcs-repository}/actions/workflows/dependabot.yml):
+*   [dependabot.yml](${vcsRepository}/actions/workflows/dependabot.yml):
     *   __Description:__ Check for new dependencies and create a pull request
     *   __Started:__ Automatically only (each day)
 

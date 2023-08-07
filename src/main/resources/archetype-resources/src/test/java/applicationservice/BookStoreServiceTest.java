@@ -4,7 +4,7 @@
 package ${groupId}.applicationservice;
 
 import io.jexxa.addend.applicationcore.DomainService;
-import ${groupId}.${name};
+import ${groupId}.${projectName};
 import ${groupId}.domain.book.BookNotInStockException;
 import ${groupId}.domain.book.BookRepository;
 import ${groupId}.domain.book.BookSoldOut;
@@ -45,7 +45,7 @@ class BookStoreServiceTest
     {
         // JexxaTest is created for each test. It provides stubs for running your tests so that no
         // mock framework is required. It expects the class name your application!
-        JexxaTest jexxaTest = getJexxaTest(${name}.class);
+        JexxaTest jexxaTest = getJexxaTest(${projectName}.class);
 
         // Request the objects needed for our tests
         objectUnderTest       = jexxaTest.getInstanceOfPort(BookStoreService.class);   // 1. We need the object we want to test

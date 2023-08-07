@@ -3,8 +3,8 @@ version: "3.7"
 
 services:
 
-  ${name}:
-    image: ${container-registry}/${artifactId.toLowerCase()}:latest
+  ${projectName}:
+    image: ${containerRegistry}/${artifactId.toLowerCase()}:latest
     ports:
       - "7508:7500" # Optional: Adjust HTTP Port "<free HTTP-Port>:7500"
     depends_on:
