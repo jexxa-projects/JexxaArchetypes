@@ -78,9 +78,15 @@
     <plugins>
 
       <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <configuration>
+            <useDefaultExcludes>false</useDefaultExcludes>
+          </configuration>
+      </plugin>
+
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <version>3.3.0</version>
         <executions>
           <execution>
             <id>enforce-maven</id>
@@ -97,6 +103,14 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+
+        <!-- <configuration>
+           <releaseProfiles>sign-artifacts</releaseProfiles>
+           <arguments>-Psign-artifacts</arguments>
+         </configuration> -->
+      </plugin>
     </plugins>
 
     <pluginManagement>
@@ -106,41 +120,13 @@
           <version>${maven.archetype.plugin}</version>
         </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>${maven.resources.plugin}</version>
-          <configuration>
-            <addDefaultExcludes>false</addDefaultExcludes>
-          </configuration>
-        </plugin>
-        <plugin>
           <artifactId>maven-release-plugin</artifactId>
           <version>${maven.release.plugin}</version>
-
-          <!-- <configuration>
-             <releaseProfiles>sign-artifacts</releaseProfiles>
-             <arguments>-Psign-artifacts</arguments>
-           </configuration> -->
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.3.0</version>
-          <executions>
-            <execution>
-              <id>enforce-maven</id>
-              <goals>
-                <goal>enforce</goal>
-              </goals>
-              <configuration>
-                <rules>
-                  <requireMavenVersion>
-                    <version>3.2.5</version>
-                  </requireMavenVersion>
-                </rules>
-              </configuration>
-            </execution>
-          </executions>
+          <version>${maven.enforcer.plugin}</version>
         </plugin>
       </plugins>
     </pluginManagement>
