@@ -106,10 +106,10 @@
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
 
-        <!-- <configuration>
+        <configuration>
            <releaseProfiles>sign-artifacts</releaseProfiles>
            <arguments>-Psign-artifacts</arguments>
-         </configuration> -->
+        </configuration>
       </plugin>
     </plugins>
 
@@ -170,17 +170,11 @@
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
       <uniqueVersion>true</uniqueVersion>
     </snapshotRepository>
-   <!-- TODO: set final repository for first public release. For 0.x.x version we still use GitHub
      <repository>
       <id>oss.sonatype.org</id>
       <name>Jexxa Maven Packages</name>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
       <uniqueVersion>true</uniqueVersion>
-    </repository> -->
-    <repository>
-      <id>github</id>
-      <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/jexxa-projects/${project.name}</url>
     </repository>
   </distributionManagement>
 </project>
