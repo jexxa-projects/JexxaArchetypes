@@ -24,7 +24,7 @@ mvn clean install
 mvn -B archetype:generate \
   -DarchetypeGroupId=io.jexxa \
   -DarchetypeArtifactId=jexxa-archetype \
-  -DarchetypeVersion=0.1.2-SNAPSHOT \
+  -DarchetypeVersion=0.1.3 \
   -DprojectName=JexxaProject \
   -DgroupId=com.github.jexxaproject \
   -DgithubAccount=jexxa-projects
