@@ -4,10 +4,11 @@ ${hash} Setup your Project on GitHub
 ${hash}${hash} Init GitHub repository
 
 * Create Repository via following [URL](https://github.com/new)
-  * Set reposotiry name to ${projectName} 
-  * Set visibility of the project. Note: In order to use GitHub's container registry ghcr, make your repository public or ensure that you have billing plan including access to ghcr. 
-  * Set owner for this project which is either your account, or one of your organizations
-* On local command line enter project directory and enter
+  * Set repository name to ${projectName} 
+  * Set visibility of the project. Note: In order to use GitHub's container registry ghcr, either make your repository public or ensure that you have billing plan including access to ghcr. 
+  * Set owner for this project which is either your GitHub account, or one of your GitHub organizations
+  * __For simplicity reason, please do not add any other files such as a README, LICENSE, or .gitignore before finishing remainging steps in this section__
+* On your local system execute following commands in the project directory:
     ```
     git init
     git add .
