@@ -7,7 +7,7 @@ ${hash}${hash} Init GitHub repository
   * Set repository name to ${projectName} 
   * Set visibility of the project. Note: In order to use GitHub's container registry ghcr, either make your repository public or ensure that you have billing plan including access to ghcr. 
   * Set owner for this project which is either your GitHub account, or one of your GitHub organizations
-  * __For simplicity reason, please do not add any other files such as a README, LICENSE, or .gitignore before finishing remainging steps in this section__
+  * __For simplicity reason, please do not add any other files such as a README, LICENSE, or .gitignore before pushing the maven project into this repo as decribed in the next steps.__
 * On your local system execute following commands in the project directory:
     ```
     git init
