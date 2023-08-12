@@ -25,7 +25,7 @@ ${hash}${hash} Configure GitHub actions
 
     * Make your repository public to use ghcr or ensure that you have billing plan including access to ghcr.
   
-*   __Automatic Depencies Updates via dependabor:__ 
+*   __Automatic Depencies Updates via dependabot:__ 
 
     *   Create a personal access token (PAT) in developer settings, as described [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with `public_repo` access enabled.
 
