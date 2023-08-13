@@ -16,9 +16,9 @@
 *   Predefined CI/CD pipeline for GitHub including automatic dependency updates 
 
 ## Usage
+
 Below you find an example how to use the archetype: 
-```
-* Build Project Template 
+ 
 ```bash
 mvn -B archetype:generate \
   -DarchetypeGroupId=io.jexxa \
