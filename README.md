@@ -34,15 +34,15 @@ mvn -B archetype:generate \
 For your own project please adjust at least parameters `projectName`, `groupId`, and `githubAccount`. 
 
 ### Description of available Parameters
-| Parameter           | Description                                                                                                      | Example                                   | Default Value                                           |
-|---------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------------|---------------------------------------------------------|
-| `projectName`       | Specifies the name of the project in the desired upper/lower case and the directory that will be created for it. | `JexxaProject`                            | None. It must be defined.                               |
-| `groupId`           | Defines the `groupID` for the project.                                                                           | `com.github.jexxaproject`                 | None. It must be defined.                               |
-| `artifactId`        | Defines the `artifactId` of the project.                                                                         | `jexxaproject`                            | `projectName` in lower cases.                           | 
-| `package`           | Defines the base pacakge name of the project.                                                                    | `com.github.jexxaproject`                 | `groupId`                                               | 
+| Parameter           | Description                                                                                                      | Example                                   | Default Value                                                 |
+|---------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------------|---------------------------------------------------------------|
+| `projectName`       | Specifies the name of the project in the desired upper/lower case and the directory that will be created for it. | `JexxaProject`                            | None. It must be defined.                                     |
+| `groupId`           | Defines the `groupID` for the project.                                                                           | `com.github.jexxaproject`                 | None. It must be defined.                                     |
+| `artifactId`        | Defines the `artifactId` of the project.                                                                         | `jexxaproject`                            | `projectName` in lower cases.                                 | 
+| `package`           | Defines the base pacakge name of the project.                                                                    | `com.github.jexxaproject`                 | `groupId`                                                     | 
 | `githubAccount`     | Defines your GitHub-Account, or one of your GitHub-Organizations that should be used                             | `jexxa-projects`                          | None. It must be defined <br />to use included GitHub-Actions | 
-| `vcsRepository`     | Defines the URL of used VCS repository.                                                                          | `https://github.com/jexxa-projects/jexxa` | `https://github.com /<githubAccount>/<projectName>`      | 
-| `containerRegistry` | Defines the URL of used container registry.                                                                      | `ghcr.io/jexxa-projects`                  | `ghcr.io/<githubAccount>`                               | 
+| `vcsRepository`     | Defines the URL of used VCS repository.                                                                          | `https://github.com/jexxa-projects/jexxa` | `https://github.com /<githubAccount>/<projectName>`           | 
+| `containerRegistry` | Defines the URL of used container registry.                                                                      | `ghcr.io/jexxa-projects`                  | `ghcr.io/<githubAccount>`                                     | 
 
 ## Run the Project 
 
