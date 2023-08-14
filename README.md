@@ -1,6 +1,8 @@
 [![Maven Central](https://img.shields.io/maven-central/v/io.jexxa/jexxa-archetype)](https://maven-badges.herokuapp.com/maven-central/io.jexxa/jexxa-archetype/) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 # JexxaArchetype
+## Summary
+The project is a Maven archetype for a Jexxa application.
 
 ## Features
 
@@ -15,9 +17,9 @@
 
 *   Predefined CI/CD pipeline for GitHub including automatic dependency updates 
 
-## Usage
+## Create a Project
 
-Below you find an example how to use the archetype: 
+Below you find an example how to use the archetype to create a project: 
  
 ```bash
 mvn -B archetype:generate \
@@ -42,3 +44,6 @@ For your own project please adjust at least parameters `projectName`, `groupId`,
 | `vcsRepository`     | Defines the URL of used VCS repository.                                                                          | `https://github.com/jexxa-projects/jexxa` | https://github.com/${githubAccount}/${projectName}      | 
 | `containerRegistry` | Defines the URL of used container registry.                                                                      | `ghcr.io/jexxa-projects`                  | `ghcr.io/${githubAccount}`                              | 
 
+## Run the Project 
+
+Please follow the README.md in created project directory how to run the project 
