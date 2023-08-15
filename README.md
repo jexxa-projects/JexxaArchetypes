@@ -41,7 +41,7 @@ For your own project please adjust at least parameters `projectName`, `groupId`,
 * Select Catalog `Central Maven` 
 * Select Archetype `io.jexxa:jexxa-archetype`
 * Select latest availale version
-* Enter your project specific settings in `Additional Properties` and `Advanced Settings`. Available options are described [here](#Description-of-available-Parameters).
+* Enter your project specific settings in `Additional Properties` and `Advanced Settings`. Available parameters are described [below](#Description-of-available-Parameters).
 
 ### Description of available Parameters
 | Parameter           | Description                                                                                                      | Example                                   | Default Value                                                 |
