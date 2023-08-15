@@ -38,12 +38,10 @@ For your own project please adjust at least parameters `projectName`, `groupId`,
 * Create new project `File > New > Project`
 * Click Maven on the left hand side of the new project dialog
 * Check `Create from archetype`
-* Click the `Add Archetype` button
-* Set `Group Id` to `io.jexxa`
-* Set `Artifact Id` to `jexxa-archetype`
-* Set `Version` to `0.1.3`
-* Click `add` to add this archetype to `Default Local` repository 
-* Click next and create the project
+* Select Catalog `Central Maven` 
+* Select Archetype `io.jexxa:jexxa-archetype`
+* Select latest availale version
+* Enter your project specific settings in `Additional Properties` and `Advanced Settings`. Available options are described [here](#Description-of-available-Parameters).
 
 ### Description of available Parameters
 | Parameter           | Description                                                                                                      | Example                                   | Default Value                                                 |
