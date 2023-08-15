@@ -19,7 +19,7 @@ The project is a Maven archetype for a Jexxa application.
 
 ## Create a Project
 
-Below you find an example how to use the archetype to create a project: 
+### Create new Project using maven  
  
 ```bash
 mvn -B archetype:generate \
@@ -32,6 +32,18 @@ mvn -B archetype:generate \
 ```
 
 For your own project please adjust at least parameters `projectName`, `groupId`, and `githubAccount`. 
+
+### Create a new project in IntelliJ
+
+* Create new project `File > New > Project`
+* Click Maven on the left hand side of the new project dialog
+* Check `Create from archetype`
+* Click the `Add Archetype` button
+* Set `Group Id` to `io.jexxa`
+* Set `Artifact Id` to `jexxa-archetype`
+* Set `Version` to `0.1.3`
+* Click `add` to add this archetype to `Default Local` repository 
+* Click next and create the project
 
 ### Description of available Parameters
 | Parameter           | Description                                                                                                      | Example                                   | Default Value                                                 |
