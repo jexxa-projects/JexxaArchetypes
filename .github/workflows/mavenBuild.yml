@@ -44,6 +44,7 @@ jobs:
         run: |
           mvn -B install --file pom.xml
           mvn -B archetype:generate \
+           -DarchetypeCatalog=local \
            -DarchetypeGroupId=io.jexxa \
            -DarchetypeArtifactId=jexxa-archetype \
            -DarchetypeVersion=${{ env.RELEASE_VERSION }} \
