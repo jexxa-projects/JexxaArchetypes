@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.jexxa</groupId>
-  <artifactId>jexxa-archetype</artifactId>
+  <artifactId>jexxa-archetypes</artifactId>
   <version>1.0.1-SNAPSHOT</version>
-  <packaging>maven-archetype</packaging>
+  <packaging>pom</packaging>
 
-  <name>JexxaArchetype</name>
+  <name>JexxaArchetypes</name>
 
   <description>JexxaArchetype - Create your own Jexxa Application</description>
 
@@ -177,4 +177,7 @@
       <uniqueVersion>true</uniqueVersion>
     </repository>
   </distributionManagement>
+  <modules>
+    <module>jexxa-archetype</module>
+  </modules>
 </project>
