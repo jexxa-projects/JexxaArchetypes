@@ -40,7 +40,7 @@ For your own project please adjust at least parameters `projectName`, `groupId`,
 * Check `Create from archetype`
 * Select Catalog `Central Maven` 
 * Select Archetype `io.jexxa:jexxa-archetype`
-* Select latest availale version
+* Select latest available version
 * Enter your project specific settings in `Additional Properties` and `Advanced Settings`. Available parameters are described [below](#Description-of-available-Parameters).
 
 ### Description of available Parameters
