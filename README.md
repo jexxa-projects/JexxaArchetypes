@@ -43,6 +43,8 @@ For your own project please adjust at least parameters `projectName`, `groupId`,
 * Select latest available version
 * Enter your project specific settings in `Additional Properties` and `Advanced Settings`. Available parameters are described [below](#Description-of-available-Parameters).
 
+Note: In IntelliJ `artifactId` should be identical to project name. So please do not adjust upper/lower case. The archetype internally converts the `artifactId` to lower cases.  
+
 ### Description of available Parameters
 | Parameter           | Description                                                                                                      | Example                                   | Default Value                                                                                       |
 |---------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------------|
