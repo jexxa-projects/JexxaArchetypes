@@ -56,4 +56,5 @@ jobs:
            -DgithubAccount=jexxa-projects
       - name: Build the project
         run: |          
-         cd JexxaProject && mvn -B clean install
+         cd ~/JexxaProject
+         mvn -B clean install
