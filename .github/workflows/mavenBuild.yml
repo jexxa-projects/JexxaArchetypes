@@ -44,7 +44,8 @@ jobs:
         run: |
           mvn -B install --file pom.xml
       - name: Generate Project from archetype
-        run: |       
+        run: |
+          cd ~
           mvn -B archetype:generate \
            -DarchetypeCatalog=local \
            -DarchetypeGroupId=io.jexxa \
