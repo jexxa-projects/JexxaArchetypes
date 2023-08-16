@@ -4,7 +4,7 @@
 
   <groupId>io.jexxa</groupId>
   <artifactId>jexxa-archetype</artifactId>
-  <version>0.1.4-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>JexxaArchetype</name>
