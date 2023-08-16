@@ -43,6 +43,8 @@ jobs:
       - name: Build with Maven
         run: |
           mvn -B install --file pom.xml
+      - name: Generate Project from archetype
+        run: |       
           mvn -B archetype:generate \
            -DarchetypeCatalog=local \
            -DarchetypeGroupId=io.jexxa \
@@ -51,5 +53,6 @@ jobs:
            -DprojectName=JexxaProject \
            -DgroupId=com.github.jexxaproject \
            -DgithubAccount=jexxa-projects
-          cd JexxaProject
-          mvn -B clean install
+      - name: Build the project
+        run: |          
+         cd JexxaProject && mvn -B clean install
