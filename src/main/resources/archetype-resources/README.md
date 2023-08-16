@@ -20,14 +20,14 @@ ${hash}${hash} Build the Project
     ```shell
     mvn clean install -P '!integrationTests'
 
-    java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-local.properties" target/${artifactId}-jar-with-dependencies.jar
+    java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-local.properties" target/${artifactId.toLowerCase()}-jar-with-dependencies.jar
     ```
 
 *   [Optional] **With** running [developer stack](deploy/developerStack.yml):
     ```shell
     mvn clean install
     
-    java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-test.properties" target/${artifactId}-jar-with-dependencies.jar
+    java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-test.properties" target/${artifactId.toLowerCase()}-jar-with-dependencies.jar
     ```
 
 *   Now you can use `curl` to access your application, or open this [http://localhost:7503/BookStoreService/getBooks](http://localhost:7503/BookStoreService/getBooks) in your browser:
