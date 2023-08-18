@@ -43,7 +43,7 @@ jobs:
       - name: Build with Maven
         run: |
           mvn -B install --file pom.xml
-      - name: Generate Project from archetype
+      - name: Generate project from jexxa-archetype
         run: |
           cd ~
           mvn -B archetype:generate \
@@ -54,7 +54,22 @@ jobs:
            -DprojectName=JexxaProject \
            -DgroupId=com.github.jexxaproject \
            -DgithubAccount=jexxa-projects
-      - name: Build the project
+      - name: Build the project generated from jexxa-archetype
         run: |          
          cd ~/JexxaProject
          mvn -B clean install
+      - name: Generate project from jexxa-blank-archetype
+        run: |
+          cd ~
+          mvn -B archetype:generate \
+           -DarchetypeCatalog=local \
+           -DarchetypeGroupId=io.jexxa \
+           -DarchetypeArtifactId=jexxa-blank-archetype \
+           -DarchetypeVersion=${{ env.RELEASE_VERSION }} \
+           -DprojectName=JexxaBlankProject \
+           -DgroupId=com.github.jexxaproject \
+           -DgithubAccount=jexxa-projects
+      - name: Build the project generated from jexxa-blank-archetype
+        run: |
+          cd ~/JexxaBlankProject
+          mvn -B clean install
