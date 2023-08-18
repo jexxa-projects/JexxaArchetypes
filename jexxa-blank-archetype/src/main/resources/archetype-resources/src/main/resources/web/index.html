@@ -1,0 +1,42 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title> Test page for Jexxa </title>
+</head>
+
+<body>
+<h1 id = "contextName">Context Name: </h1>
+
+<script>
+    const BASE_URL = window.location.protocol + '//' + location.host +'/BoundedContext';
+
+    const appendToDOM = (message) => {
+        document
+            .querySelector("${symbol_pound}contextName")
+            .append(message);
+    };
+
+    const fetchGreetings = () => {
+        fetch(`${symbol_dollar}{BASE_URL}/contextName`)
+            .then( response => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(`GET contextName`, data);
+                // append to DOM
+                appendToDOM(data);
+            })
+            .catch(error => console.error(error));
+    };
+
+    fetchGreetings();
+</script>
+</body>
+</html>
