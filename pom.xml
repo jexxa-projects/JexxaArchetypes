@@ -9,7 +9,7 @@
 
   <name>JexxaArchetypes</name>
 
-  <description>JexxaArchetype - Create your own Jexxa Application</description>
+  <description>JexxaArchetypes - Templates for your Jexxa Application</description>
 
   <url>https://www.jexxa.io</url>
 
@@ -28,9 +28,9 @@
 
 
   <scm>
-    <connection>scm:git:https://github.com/jexxa-projects/JexxaArchetype.git</connection>
-    <developerConnection>scm:git:https://github.com/jexxa-projects/JexxaArchetype.git</developerConnection>
-    <url>https://github.com/jexxa-projects/JexxaArchetype</url>
+    <connection>scm:git:https://github.com/jexxa-projects/JexxaArchetypes.git</connection>
+    <developerConnection>scm:git:https://github.com/jexxa-projects/JexxaArchetypes.git</developerConnection>
+    <url>https://github.com/jexxa-projects/JexxaArchetypes</url>
     <tag>HEAD</tag>
   </scm>
 
