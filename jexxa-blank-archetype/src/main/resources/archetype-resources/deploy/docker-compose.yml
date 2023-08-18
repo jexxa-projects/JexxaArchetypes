@@ -1,9 +1,10 @@
+#set($hash = '#')
 version: "3.7"
 
 services:
 
-  JexxaBlankArchetype:
-    image: ghcr.io/jexxa-projects/jexxablankarchetype:latest
+  ${projectName}:
+    image: ${containerRegistry}/${artifactId.toLowerCase()}:latest
     ports:
       - "7508:7500" # Optional: Adjust HTTP Port "<free HTTP-Port>:7500"
     depends_on:
@@ -29,7 +30,8 @@ services:
       restart_policy:
         condition: on-failure
 
-  
+  ### Infrastructure ###
+
   ActiveMQ:
     image: quay.io/artemiscloud/activemq-artemis-broker:latest
     environment:
