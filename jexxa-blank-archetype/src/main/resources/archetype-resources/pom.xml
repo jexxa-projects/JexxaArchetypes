@@ -3,19 +3,19 @@
   <modelVersion>4.0.0</modelVersion>
 
 
-  <name>JexxaBlankArchetype</name>
-  <groupId>${groupId}</groupId>
-  <artifactId>${artifactId}</artifactId>
+  <name>${projectName}</name>
+  <groupId>${groupId.toLowerCase()}</groupId>
+  <artifactId>${artifactId.toLowerCase()}</artifactId>
   <version>${version}</version>
 
-  <url>https://github.com/jexxa-projects/JexxaBlankArchetype</url>
+  <url>${vcsRepository}</url>
 
-  <description>JexxaBlankArchetype - Your Jexxa Application</description>
+  <description>${projectName} - Your Jexxa Application</description>
 
   <scm>
-    <connection>scm:git:https://github.com/jexxa-projects/JexxaBlankArchetype.git</connection>
-    <url>https://github.com/jexxa-projects/JexxaBlankArchetype</url>
-    <developerConnection>scm:git:https://github.com/jexxa-projects/JexxaBlankArchetype.git</developerConnection>
+    <connection>scm:git:${vcsRepository}.git</connection>
+    <url>${vcsRepository}</url>
+    <developerConnection>scm:git:${vcsRepository}.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
@@ -33,10 +33,10 @@
     <docker.https.port>8081</docker.https.port>
     <docker.base.image>eclipse-temurin:17-alpine</docker.base.image>
     <docker.user>guest</docker.user> <!-- Defines the user running the application inside the container. Note: This user must be already created inside the base image -->
-    <image.repository.root>ghcr.io/jexxa-projects</image.repository.root>
+    <image.repository.root>${containerRegistry}</image.repository.root>
 
     <!-- version of dependencies -->
-    <jexxa.release.version>6.1.4</jexxa.release.version>
+    <jexxa.release.version>6.1.5</jexxa.release.version>
     <addend.version>2.0.0</addend.version>
     <activemq.artemis.client.version>2.30.0</activemq.artemis.client.version>
     <postgres.version>42.6.0</postgres.version>
@@ -78,8 +78,10 @@
     <maven.exec.plugin>3.1.0</maven.exec.plugin>
 
   <!-- command to start the application for integration tests -->
-  <context.command.start>-javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec,port=6300,output=tcpserver
-        -jar -Dio.jexxa.config.import=./src/test/resources/jexxa-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar</context.command.start>
+  <context.command.start>
+        -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec,port=6300,output=tcpserver
+        -jar -Dio.jexxa.config.import=./src/test/resources/jexxa-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar
+  </context.command.start>
 </properties>
 
   <dependencies>
@@ -472,12 +474,16 @@
             </tags>
           </to>
           <container>
-            <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+            <creationTime>
+              USE_CURRENT_TIMESTAMP
+            </creationTime>
             <ports>
               <port>${docker.http.port}</port>
               <port>${docker.https.port}</port>
             </ports>
-            <user>${docker.user}</user>
+            <user>
+              ${docker.user}
+            </user>
           </container>
         </configuration>
       </plugin>
@@ -654,7 +660,9 @@
                 <configuration>
                   <executable>${java.home}/bin/java</executable>
                   <async>true</async>
-                  <commandlineArgs>${context.command.start}</commandlineArgs>
+                  <commandlineArgs>
+                    ${context.command.start}
+                  </commandlineArgs>
                 </configuration>
               </execution>
             </executions>
@@ -668,6 +676,7 @@
     <profile>     <!-- add tag developer image -->
       <id>localDockerImage</id>
       <activation>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <properties>
         <dockerTag>developerImage</dockerTag>

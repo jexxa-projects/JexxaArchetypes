@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.integration;
 
-import ${package}.JexxaBlankArchetype;
+import ${package}.${projectName};
 import io.jexxa.jexxatest.JexxaIntegrationTest;
 import io.jexxa.jexxatest.integrationtest.rest.RESTBinding;
 import org.junit.jupiter.api.AfterAll;
@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class  JexxaBlankArchetypeIT
+class  ${projectName}IT
 {
     private static JexxaIntegrationTest jexxaIntegrationTest;  // Simplified IT testing with jexxa-test
     private static RESTBinding restBinding;                    // Binding to access application under test via REST
@@ -20,7 +20,7 @@ class  JexxaBlankArchetypeIT
     @BeforeAll
     static void initBeforeAll()
     {
-        jexxaIntegrationTest = new JexxaIntegrationTest(JexxaBlankArchetype.class);
+        jexxaIntegrationTest = new JexxaIntegrationTest(${projectName}.class);
         restBinding = jexxaIntegrationTest.getRESTBinding();
     }
 
@@ -35,7 +35,7 @@ class  JexxaBlankArchetypeIT
         var result = boundedContext.contextName();
 
         //Assert
-        assertEquals(JexxaBlankArchetype.class.getSimpleName(), result);
+        assertEquals(${projectName}.class.getSimpleName(), result);
     }
 
     @AfterAll

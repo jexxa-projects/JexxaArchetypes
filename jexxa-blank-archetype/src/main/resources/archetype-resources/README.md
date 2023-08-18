@@ -36,7 +36,7 @@ ${hash}${hash} Build the Project
     ```
     Response should look as follows 
     ```Console
-    "true"
+    true
     ```
 *   [Optional] See [here](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/README-OPENAPI.md#explore-openapi) how to use the application with Swagger-UI
 
@@ -45,6 +45,23 @@ ${hash}${hash} Start Developing your Project
 ${hash}${hash}${hash} Set up your project on GitHub  
 
 In order to continuously build and deploy your application, we recommend using GitHub as described [here](README-GitHub.md).
+
+${hash}${hash}${hash} Package Structure
+In order to organize our code we recommend following package structure that is based on the concepts of Domain Driven Design:
+
+``` 
+(${package})
+    applicationservice
+    domain
+    domainservice
+    infrastructure
+    |    drivenadapter
+    |    |    persistence
+    |    |    messaging
+    |    drivingadapter
+    |    |    messaging
+    ${projectName}.java
+```
 
 ${hash}${hash}${hash} Cleanup Readme
 

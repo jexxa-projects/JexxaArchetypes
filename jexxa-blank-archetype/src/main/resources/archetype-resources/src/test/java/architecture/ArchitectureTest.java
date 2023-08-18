@@ -1,10 +1,9 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.architecture;
+package ${groupId}.architecture;
 
-import ${package}.JexxaBlankArchetype;
-import org.junit.jupiter.api.Disabled;
+import ${groupId}.${projectName};
 import org.junit.jupiter.api.Test;
 
 import static io.jexxa.jexxatest.architecture.ArchitectureRules.aggregateRules;
@@ -23,13 +22,13 @@ class ArchitectureTest {
     @Test
     void validatePortsAndAdapters()
     {
-        portsAndAdapters(JexxaBlankArchetype.class)
+        portsAndAdapters(${projectName}.class)
                 // Add all packages providing driven adapter
                 .addDrivenAdapterPackage("persistence")
                 .addDrivenAdapterPackage("messaging")
 
                 // Add all packages providing driving adapter such as
-                .addDrivingAdapterPackage("messaging")
+                // .addDrivingAdapterPackage("messaging")
 
                 .validate();
     }
@@ -37,13 +36,12 @@ class ArchitectureTest {
     @Test
     void validatePatternLanguage()
     {
-        patternLanguage(JexxaBlankArchetype.class).validate();
+        patternLanguage(${projectName}.class).validate();
     }
 
     @Test
-    @Disabled("Enable test after adding your first aggregate")
     void validateAggregateRules()
     {
-        aggregateRules(JexxaBlankArchetype.class).validate();
+        aggregateRules(${projectName}.class).validate();
     }
 }
