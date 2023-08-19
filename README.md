@@ -2,7 +2,9 @@
 
 # JexxaArchetypes
 ## Summary
-The project is a Maven archetype for a Jexxa application.
+This project provides following Maven archetypes for a Jexxa application: 
+* `jexxa-blank-archetype`: Generates a project including only source code that is part of all projects (such as a main-class).  
+* `jexxa-archetype`: Generates a project including source code of [BookStore tutorial](https://github.com/jexxa-projects/JexxaTutorials/tree/main/BookStore). It is recommended if you want to play around with existing source code to get familiar with Jexxa and/or ports and adapter architecture. 
 
 ## Features
 
@@ -10,18 +12,28 @@ The project is a Maven archetype for a Jexxa application.
 
 *   Template for [Unit-](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/domain/book/BookTest.java), [Stub-](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/applicationservice/BookStoreServiceTest.java) and [Integration tests](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/integration/BookstoreIT.java)
 
-*   Predefined architectural tests for:
-    *   [Pattern Language](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/architecture/ArchitectureTest.java) to validate the correct annotation of your application using project [Addend](http://addend.jexxa.io/)
-    *   [Ports&Adapters Architecture](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/architecture/ArchitectureTest.java) to validate dependencies between packages of your application
-    *   [Usage of Aggregates](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/architecture/ArchitectureTest.java) to validate that your business logic is not exposed
+*   [Architectural tests](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/architecture/ArchitectureTest.java) for _pattern language_, _ports & adapters architecture_, and _usage of aggregates_. 
 
 *   Predefined CI/CD pipeline for GitHub including automatic dependency updates 
 
-## Create a Project
+## Create your Project
 
 ### Create new Project using maven  
- 
-```bash
+
+For your own project please adjust at least parameters `projectName`, `groupId`, and `githubAccount`.
+
+For `jexxa-blank-archetype` use:
+```bash 
+mvn -B archetype:generate \
+  -DarchetypeGroupId=io.jexxa \
+  -DarchetypeArtifactId=jexxa-blank-archetype \
+  -DprojectName=JexxaProject \
+  -DgroupId=com.github.jexxaproject \
+  -DgithubAccount=jexxa-projects
+```
+
+For `jexxa-archetype` use: 
+```bash 
 mvn -B archetype:generate \
   -DarchetypeGroupId=io.jexxa \
   -DarchetypeArtifactId=jexxa-archetype \
@@ -30,15 +42,13 @@ mvn -B archetype:generate \
   -DgithubAccount=jexxa-projects
 ```
 
-For your own project please adjust at least parameters `projectName`, `groupId`, and `githubAccount`. 
-
 ### Create a new project in IntelliJ
 
 * Create new project `File > New > Project`
 * Click Maven on the left hand side of the new project dialog
 * Check `Create from archetype`
 * Select Catalog `Central Maven` 
-* Select Archetype `io.jexxa:jexxa-archetype`
+* Select Archetype `io.jexxa:jexxa-archetype` or `io.jexxa:jexxa-blank-archetype`
 * Select latest available version
 * Enter your project specific settings in `Additional Properties` and `Advanced Settings`. Available parameters are described [below](#Description-of-available-Parameters).
 

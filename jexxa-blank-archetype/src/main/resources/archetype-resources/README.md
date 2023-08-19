@@ -53,7 +53,10 @@ In order to organize our code we recommend following package structure that is b
 (${package})
     applicationservice
     domain
-    domainservice
+    |    <use case 1>
+    |    ...
+    |    <use case n>    
+    domainservice    
     infrastructure
     |    drivenadapter
     |    |    persistence
