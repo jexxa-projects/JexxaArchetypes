@@ -77,12 +77,12 @@
     <maven.shade.plugin>3.5.0</maven.shade.plugin>
     <maven.exec.plugin>3.1.0</maven.exec.plugin>
 
-  <!-- command to start the application for integration tests -->
-  <context.command.start>
-        -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec,port=6300,output=tcpserver
-        -jar -Dio.jexxa.config.import=./src/test/resources/jexxa-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar
-  </context.command.start>
-</properties>
+    <!-- command to start the application for integration tests -->
+    <context.command.start>
+          -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec,port=6300,output=tcpserver
+          -jar -Dio.jexxa.config.import=./src/test/resources/jexxa-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar
+    </context.command.start>
+  </properties>
 
   <dependencies>
     <!-- Dependencies required for application -->
