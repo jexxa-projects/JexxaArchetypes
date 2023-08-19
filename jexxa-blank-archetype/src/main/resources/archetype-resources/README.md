@@ -30,7 +30,7 @@ ${hash}${hash} Build the Project
     java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-test.properties" target/${artifactId.toLowerCase()}-jar-with-dependencies.jar
     ```
 
-*   Now you can use `curl` to access your application, or open this [http://localhost:7503/BoundedContext/isRunning](http://localhost:7503/BoundedContext/isRunning) in your browser:
+*   Now you can use `curl` to access your application, or open  [http://localhost:7503/BoundedContext/isRunning](http://localhost:7503/BoundedContext/isRunning) in your browser:
     ```Console
     curl -X GET  http://localhost:7503/BoundedContext/isRunning
     ```
