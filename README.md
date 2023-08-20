@@ -2,7 +2,7 @@
 
 # JexxaArchetypes
 ## Summary
-This project provides following Maven archetypes for a Jexxa application: 
+This project provides the following Maven archetypes for a Jexxa application: 
 * `jexxa-blank-archetype`: Generates a project including only source code that is part of all projects (such as a main-class).  
 * `jexxa-archetype`: Generates a project including source code of [BookStore tutorial](https://github.com/jexxa-projects/JexxaTutorials/tree/main/BookStore). It is recommended if you want to play around with existing source code to get familiar with Jexxa and/or ports and adapter architecture. 
 
@@ -18,7 +18,7 @@ This project provides following Maven archetypes for a Jexxa application:
 
 ## Create your Project
 
-### Create new Project using maven  
+### Create a new Project using maven  
 
 For your own project please adjust at least parameters `projectName`, `groupId`, and `githubAccount`.
 
@@ -45,15 +45,15 @@ mvn -B archetype:generate \
 ### Create a new project in IntelliJ
 
 * Create new project `File > New > Project`
-* Click Maven on the left hand side of the new project dialog
+* Click Maven on the left-hand side of the new project dialog
 * Check `Create from archetype`
 * Select Catalog `Central Maven` 
 * Select Archetype `io.jexxa:jexxa-archetype` or `io.jexxa:jexxa-blank-archetype`
 * Select latest available version
-* Enter your project specific settings in `Additional Properties` and `Advanced Settings`. Available parameters are described [below](#Description-of-available-Parameters).
+* Enter your project-specific settings in `Additional Properties` and `Advanced Settings`. Available parameters are described [below](#Description-of-available-Parameters).
 
 Special Note: 
-* __Windows__: `artifactId` must be written with same upper/lower case as the `projectName`, such as `JexxaProejct`. 
+* __Windows__: `artifactId` must be written with the same upper/lower case as the `projectName`, such as `JexxaProejct`. 
 * __Linux/macOS__: `artifactId`must be written in lower cases, such as `jexxaproject`.
 
 ### Description of available Parameters
