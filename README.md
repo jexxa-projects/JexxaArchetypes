@@ -52,7 +52,9 @@ mvn -B archetype:generate \
 * Select latest available version
 * Enter your project specific settings in `Additional Properties` and `Advanced Settings`. Available parameters are described [below](#Description-of-available-Parameters).
 
-Note: In IntelliJ `artifactId` should be identical to project name. So please do not adjust upper/lower case. The archetype internally converts the `artifactId` to lower cases.  
+Special Note: 
+* __Windows__: `artifactId` must be written with same upper/lower case as the `projectName`, such as `JexxaProejct`. 
+* __Linux/macOS__: `artifactId`must be written in lower cases, such as `jexxaproject`.
 
 ### Description of available Parameters
 | Parameter           | Description                                                                                                      | Example                                   | Default Value                                                                                       |
