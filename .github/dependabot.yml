@@ -8,6 +8,21 @@ updates:
     # Check for updates once daily
     schedule:
       interval: "daily"
+      
+  - package-ecosystem: "maven"
+    directory: "/jexxa-archetype/src/main/resources/archetype-resources"
+    open-pull-requests-limit: 10
+    # Check for updates once daily
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "maven"
+    directory: "/jexxa-blank-archetype/src/main/resources/archetype-resources"
+    open-pull-requests-limit: 10
+    # Check for updates once daily
+    schedule:
+      interval: "daily"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
