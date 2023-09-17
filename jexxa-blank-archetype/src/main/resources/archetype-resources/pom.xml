@@ -40,7 +40,7 @@
     <addend.version>2.0.0</addend.version>
     <activemq.artemis.client.version>2.30.0</activemq.artemis.client.version>
     <postgres.version>42.6.0</postgres.version>
-    <slf4j.simple.version>2.0.7</slf4j.simple.version>
+    <slf4j.simple.version>2.0.9</slf4j.simple.version>
 
     <!-- version of test dependencies -->
     <junit.platform.launcher.version>1.10.0</junit.platform.launcher.version>
