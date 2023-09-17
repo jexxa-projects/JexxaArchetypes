@@ -36,7 +36,7 @@
     <image.repository.root>${containerRegistry}</image.repository.root>
 
     <!-- version of dependencies -->
-    <jexxa.release.version>6.1.5</jexxa.release.version>
+    <jexxa.release.version>6.1.6</jexxa.release.version>
     <addend.version>2.0.0</addend.version>
     <activemq.artemis.client.version>2.30.0</activemq.artemis.client.version>
     <postgres.version>42.6.0</postgres.version>
