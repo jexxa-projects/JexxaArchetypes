@@ -31,7 +31,7 @@
     <!-- Settings for docker image -->
     <docker.http.port>7500</docker.http.port>
     <docker.https.port>8081</docker.https.port>
-    <docker.base.image>eclipse-temurin:17-alpine</docker.base.image>
+    <docker.base.image>eclipse-temurin:17-jre-alpine</docker.base.image>
     <docker.user>guest</docker.user> <!-- Defines the user running the application inside the container. Note: This user must be already created inside the base image -->
     <image.repository.root>${containerRegistry}</image.repository.root>
 
