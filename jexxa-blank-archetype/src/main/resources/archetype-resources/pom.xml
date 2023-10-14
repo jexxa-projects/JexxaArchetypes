@@ -23,7 +23,7 @@
     <main.class>${project.groupId}.${project.name}</main.class>
     <!-- target/compiler configuration  -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.release>${javaVersion}</maven.compiler.release>
 
     <!-- Minimum Test coverage in %-->
     <test.coverage.minimum>0.00</test.coverage.minimum>
