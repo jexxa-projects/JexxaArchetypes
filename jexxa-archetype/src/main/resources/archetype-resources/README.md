@@ -7,7 +7,7 @@ This template can be used to start your own Jexxa application
  
 ${hash}${hash}  Requirements
 
-*   Java 17+ installed
+*   Java ${javaVersion}+ installed
 *   IDE with maven support 
 *   [Optional] Docker or Kubernetes if you want to run your application in a container. See [here](README-GitHub.md) for more information.   
 *   [Optional] A locally running [developer stack](deploy/developerStack.yml) providing a Postgres database, ActiveMQ broker, and Swagger-UI 

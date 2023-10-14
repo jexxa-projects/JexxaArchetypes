@@ -23,7 +23,7 @@
     <main.class>${project.groupId}.${project.name}</main.class>
     <!-- target/compiler configuration  -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release>
+    <maven.compiler.release>${javaVersion}</maven.compiler.release>
 
     <!-- Minimum Test coverage in %-->
     <test.coverage.minimum>0.00</test.coverage.minimum>
@@ -31,7 +31,7 @@
     <!-- Settings for docker image -->
     <docker.http.port>7500</docker.http.port>
     <docker.https.port>8081</docker.https.port>
-    <docker.base.image>eclipse-temurin:17-jre-alpine</docker.base.image>
+    <docker.base.image>eclipse-temurin:${javaVersion}-jre-alpine</docker.base.image>
     <docker.user>guest</docker.user> <!-- Defines the user running the application inside the container. Note: This user must be already created inside the base image -->
     <image.repository.root>${containerRegistry}</image.repository.root>
 
