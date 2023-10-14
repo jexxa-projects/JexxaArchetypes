@@ -28,3 +28,15 @@ updates:
     schedule:
       # Check for updates to GitHub Actions every week
       interval: "weekly"
+
+  - package-ecosystem: "github-actions"
+    directory: "/jexxa-blank-archetype/src/main/resources/archetype-resources"
+    schedule:
+      # Check for updates to GitHub Actions every week
+      interval: "weekly"
+
+  - package-ecosystem: "github-actions"
+    directory: "/jexxa-archetype/src/main/resources/archetype-resources"
+    schedule:
+      # Check for updates to GitHub Actions every week
+      interval: "weekly"
