@@ -2,13 +2,14 @@
 
 # JexxaArchetypes
 ## Summary
-This project provides the following Maven archetypes for a Jexxa application: 
-* `jexxa-blank-archetype`: Generates a project including only source code that is part of all projects (such as a main-class).  
+This project provides the following Maven archetypes for a Jexxa or JLegMed application: 
+* `jlegmed-blank-archetype`: Generates a project for a JLegMed application including only source code that is part of all projects (such as a main-class).
+* `jexxa-blank-archetype`: Generates a project for a Jexxa application including only source code that is part of all projects (such as a main-class).  
 * `jexxa-archetype`: Generates a project including source code of [BookStore tutorial](https://github.com/jexxa-projects/JexxaTutorials/tree/main/BookStore). It is recommended if you want to play around with existing source code to get familiar with Jexxa and/or ports and adapter architecture. 
 
 ## Features
 
-*   Build your first Jexxa-project as self-contained jar and/or docker image
+*   Build your first Jexxa- or JLegMed project as self-contained jar and/or docker image
 
 *   Template for [Unit-](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/domain/book/BookTest.java), [Stub-](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/applicationservice/BookStoreServiceTest.java) and [Integration tests](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/integration/BookstoreIT.java)
 
@@ -22,6 +23,16 @@ This project provides the following Maven archetypes for a Jexxa application:
 
 For your own project please adjust at least parameters `projectName`, `groupId`, and `githubAccount`.
 Available parameters are described [below](#Description-of-available-Parameters).
+
+For `jlegmed-blank-archetype` use:
+```bash 
+mvn -B archetype:generate \
+  -DarchetypeGroupId=io.jexxa \
+  -DarchetypeArtifactId=jlegmed-blank-archetype \
+  -DprojectName=JLegMedProject \
+  -DgroupId=com.github.jlegmedproject \
+  -DgithubAccount=jexxa-projects
+```
 
 For `jexxa-blank-archetype` use:
 ```bash 
