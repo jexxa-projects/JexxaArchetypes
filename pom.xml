@@ -180,5 +180,6 @@
   <modules>
     <module>jexxa-archetype</module>
     <module>jexxa-blank-archetype</module>
+    <module>jlegmed-blank-archetype</module>
   </modules>
 </project>
