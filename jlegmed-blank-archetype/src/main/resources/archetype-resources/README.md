@@ -39,7 +39,7 @@ To organize our code we recommend the following package structure:
     plugins
     |    <technology 1>
     |    ...
-    |    <technology 1>
+    |    <technology n>
     dto  
     |    <use case 1>
     |    ...
