@@ -36,6 +36,7 @@
     <image.repository.root>${containerRegistry}</image.repository.root>
 
     <!-- version of dependencies -->
+    <jlegmed.core.version>0.6.0</jlegmed.core.version>
     <activemq.artemis.client.version>2.31.2</activemq.artemis.client.version>
     <postgres.version>42.6.0</postgres.version>
     <slf4j.simple.version>2.0.9</slf4j.simple.version>
@@ -84,6 +85,11 @@
 
   <dependencies>
     <!-- Dependencies required for application -->
+    <dependency>
+      <groupId>io.jexxa.jlegmed</groupId>
+      <artifactId>jlegmed-core</artifactId>
+      <version>${jlegmed.core.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>

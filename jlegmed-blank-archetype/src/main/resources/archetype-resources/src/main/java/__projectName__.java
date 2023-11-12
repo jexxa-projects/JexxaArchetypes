@@ -3,8 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package};
 
-import io.jexxa.core.JexxaMain;
-import io.jexxa.drivingadapter.rest.RESTfulRPCAdapter;
+import io.jexxa.jlegmed.core.JLegMed;
+import java.util.concurrent.TimeUnit;
+import static org.slf4j.LoggerFactory.getLogger;
 
 public final class ${projectName}
 {
