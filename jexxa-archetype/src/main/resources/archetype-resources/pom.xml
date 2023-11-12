@@ -168,11 +168,11 @@
     </dependency>
   </dependencies>
 
-  <!-- ********************************************************************** -->
-  <!-- IMPORTANT: Change following lines only if you are familiar with maven  -->
-  <!-- IMPORTANT: If you really need to adjust following lines, please check  -->
-  <!-- IMPORTANT: if you should start your maven project.                     -->
-  <!-- ********************************************************************** -->
+  <!-- ************************************************************************** -->
+  <!-- IMPORTANT: Change the following lines only if you are familiar with maven  -->
+  <!-- IMPORTANT: If you really need to adjust the following lines, please check  -->
+  <!-- IMPORTANT: if you should start your maven project.                         -->
+  <!-- ************************************************************************** -->
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults -->
       <plugins>

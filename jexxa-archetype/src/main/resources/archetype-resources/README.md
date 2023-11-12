@@ -48,7 +48,7 @@ ${hash}${hash} Start Developing your Project
 
 ${hash}${hash}${hash} Set up your project on GitHub  
 
-In order to continuously build and deploy your application, we recommend using GitHub as described [here](README-GitHub.md).
+To continuously build and deploy your application, we recommend using GitHub as described [here](README-GitHub.md).
 
 ${hash}${hash}${hash} Cleanup Readme
 

@@ -3,12 +3,12 @@ ${hash} Set up your Project on GitHub
 
 ${hash}${hash} Init GitHub repository
 
-* Create Repository via following [URL](https://github.com/new)
+* Create Repository via the following [URL](https://github.com/new)
   * Set repository name to ${projectName} 
-  * Set visibility of the project. Note: In order to use GitHub's container registry ghcr, either make your repository public or ensure that you have billing plan including access to ghcr. 
+  * Set visibility of the project. Note: To use GitHub's container registry ghcr, either make your repository public or ensure that you have billing plan including access to ghcr. 
   * Set owner for this project which is either your GitHub account, or one of your GitHub organizations
   * __For simplicity reason, please do not add any other files such as a README, LICENSE, or .gitignore before pushing the maven project into this repo as decribed in the next steps.__
-* On your local system execute following commands in the project directory:
+* On your local system execute the following commands in the project directory:
     ```
     git init
     git add .
@@ -36,7 +36,7 @@ ${hash}${hash} Configure GitHub actions
 
 ${hash}${hash} Using GitHub actions
 
-We provide following GitHub actions that are either started manually or automatically. To validate the actions start all actions with start option `manually`:  
+We provide the following GitHub actions that are either started manually or automatically. To validate the actions start all actions with start option `manually`:  
 
 *   [mavenBuild.yml](${vcsRepository}/actions/workflows/mavenBuild.yml):
     *   __Description:__ Builds the project after each push
@@ -71,7 +71,7 @@ ${hash}${hash}${hash} Docker-Stacks
 
 ${hash}${hash}${hash} Deploy Stack 
 
-In order to deploy the stack, you can use following command from your checkout directory. 
+To deploy the stack, you can use the following command from your checkout directory. 
 ```shell
 docker stack deploy --compose-file ./deploy/docker-compose.yml ${artifactId.toLowerCase()}
 ```
