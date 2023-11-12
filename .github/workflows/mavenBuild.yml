@@ -69,7 +69,25 @@ jobs:
            -DprojectName=JexxaBlankProject \
            -DgroupId=com.github.jexxaproject \
            -DgithubAccount=jexxa-projects
+
       - name: Build the project generated from jexxa-blank-archetype
         run: |
           cd ~/JexxaBlankProject
+          mvn -B clean install
+
+      - name: Generate project from jlegmed-blank-archetype
+        run: |
+          cd ~
+          mvn -B archetype:generate \
+           -DarchetypeCatalog=local \
+           -DarchetypeGroupId=io.jexxa \
+           -DarchetypeArtifactId=jlegmed-blank-archetype \
+           -DarchetypeVersion=${{ env.RELEASE_VERSION }} \
+           -DprojectName=JLegMedBlankProject \
+           -DgroupId=com.github.jexxaproject \
+           -DgithubAccount=jexxa-projects
+
+      - name: Build the project generated from jexxa-blank-archetype
+        run: |
+          cd ~/JLegMedBlankProject
           mvn -B clean install

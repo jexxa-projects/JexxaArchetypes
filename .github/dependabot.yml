@@ -23,6 +23,13 @@ updates:
     schedule:
       interval: "daily"
 
+  - package-ecosystem: "maven"
+    directory: "/jlegmed-blank-archetype/src/main/resources/archetype-resources"
+    open-pull-requests-limit: 10
+    # Check for updates once daily
+    schedule:
+      interval: "daily"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -36,13 +43,13 @@ updates:
       interval: "weekly"
 
   - package-ecosystem: "github-actions"
-    directory: "/jexxa-blank-archetype/src/main/resources/archetype-resources/.github/workflows"
+    directory: "/jexxa-archetype/src/main/resources/archetype-resources/.github/workflows"
     schedule:
       # Check for updates to GitHub Actions every week
       interval: "weekly"
 
   - package-ecosystem: "github-actions"
-    directory: "/jexxa-archetype/src/main/resources/archetype-resources/.github/workflows"
+    directory: "/jlegmed-blank-archetype/src/main/resources/archetype-resources/.github/workflows"
     schedule:
       # Check for updates to GitHub Actions every week
       interval: "weekly"
