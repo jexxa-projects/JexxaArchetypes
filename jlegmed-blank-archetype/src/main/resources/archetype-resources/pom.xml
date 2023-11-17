@@ -74,7 +74,7 @@
     <maven.build.helper.version>3.4.0</maven.build.helper.version>
     <maven.jib.plugin>3.4.0</maven.jib.plugin>
     <maven.shade.plugin>3.5.1</maven.shade.plugin>
-    <maven.exec.plugin>3.1.0</maven.exec.plugin>
+    <maven.exec.plugin>3.1.1</maven.exec.plugin>
 
     <!-- command to start the application for integration tests -->
     <context.command.start>
