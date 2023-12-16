@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## \[2.0.0] - 2023-12-16
+
+### Changed
+- Updated to new major versions of jexxa and jlegmed
+
 ## \[1.3.3] - 2023-12-05
 
 ### Fixed
