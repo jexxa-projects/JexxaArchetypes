@@ -4,15 +4,15 @@
 package ${groupId}.infrastructure.drivenadapter.messaging;
 
 import io.jexxa.addend.infrastructure.DrivenAdapter;
-import io.jexxa.infrastructure.messaging.MessageSender;
+import io.jexxa.common.drivenadapter.messaging.MessageSenderManager;
+import io.jexxa.common.drivenadapter.messaging.MessageSender;
 import ${groupId}.domain.book.BookSoldOut;
 import ${groupId}.domainservice.DomainEventSender;
 
 import java.util.Objects;
 import java.util.Properties;
 
-import static io.jexxa.infrastructure.MessageSenderManager.getMessageSender;
-
+import static io.jexxa.common.drivenadapter.messaging.MessageSenderManager.getMessageSender;
 
 @SuppressWarnings("unused")
 @DrivenAdapter

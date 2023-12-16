@@ -5,7 +5,7 @@ package ${groupId}.infrastructure.drivenadapter.persistence;
 
 
 import io.jexxa.addend.infrastructure.DrivenAdapter;
-import io.jexxa.infrastructure.persistence.repository.IRepository;
+import io.jexxa.common.drivenadapter.persistence.repository.IRepository;
 import ${groupId}.domain.book.Book;
 import ${groupId}.domain.book.ISBN13;
 import ${groupId}.domain.book.BookRepository;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 
-import static io.jexxa.infrastructure.RepositoryManager.getRepository;
+import static io.jexxa.common.drivenadapter.persistence.RepositoryManager.getRepository;
 
 
 @SuppressWarnings("unused")
