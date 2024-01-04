@@ -5,7 +5,7 @@
   <parent>
     <artifactId>jexxa-archetypes</artifactId>
     <groupId>io.jexxa</groupId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.1</version>
   </parent>
 
   <artifactId>jexxa-blank-archetype</artifactId>
