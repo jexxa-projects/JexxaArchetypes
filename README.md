@@ -1,6 +1,6 @@
 [![Maven Central](https://img.shields.io/maven-central/v/io.jexxa/jexxa-archetype)](https://maven-badges.herokuapp.com/maven-central/io.jexxa/jexxa-archetype/) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# JexxaArchetypes
+# Jexxa-Projects Archetypes
 ## Summary
 This project provides the following Maven archetypes for a Jexxa or JLegMed application: 
 * `jlegmed-blank-archetype`: Generates a project for a JLegMed application including only source code that is part of all projects (such as a main-class).
