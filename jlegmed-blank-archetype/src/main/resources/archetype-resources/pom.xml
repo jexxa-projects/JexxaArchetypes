@@ -10,7 +10,7 @@
 
   <url>${vcsRepository}</url>
 
-  <description>${projectName} - Your Jexxa Application</description>
+  <description>${projectName} - Your JLegMed Application</description>
 
   <scm>
     <connection>scm:git:${vcsRepository}.git</connection>
@@ -79,7 +79,7 @@
     <!-- command to start the application for integration tests -->
     <context.command.start>
           -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec,port=6300,output=tcpserver
-          -jar -Dio.jlegmed.config.import=./src/test/resources/jlegmed-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar
+          -jar -Djlegmed.config.import=./src/test/resources/jlegmed-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar
     </context.command.start>
   </properties>
 
