@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## \[2.0.3] - 2024-mm-dd
+### Fixed
+- Default properties in JLegMed archetype use artifactID as default postgres schema
+
+
 ## \[2.0.2] - 2024-01-11
 ### Fixed
 - Updated dependencies
