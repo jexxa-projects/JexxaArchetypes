@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## \[2.0.3] - 2024-mm-dd
 ### Fixed
 - Default properties in JLegMed archetype use artifactID as default postgres schema
-
+- Excluded signature files from dependencies when building the fat jar. Otherwise, this will cause a security exception when starting the fat jar. 
+- Updated dependencies 
 
 ## \[2.0.2] - 2024-01-11
 ### Fixed
