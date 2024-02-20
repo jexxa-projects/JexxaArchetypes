@@ -65,12 +65,14 @@
       <includes>
         <include>README.md</include>
         <include>README-GitHub.md</include>
+        <include>cliff.toml</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
         <include>.gitignore</include>
+        <include>CHANGELOG.md</include>
       </includes>
     </fileSet>
   </fileSets>

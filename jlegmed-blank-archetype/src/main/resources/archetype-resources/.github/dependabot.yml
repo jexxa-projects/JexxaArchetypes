@@ -8,8 +8,15 @@ updates:
     # Check for updates once daily
     schedule:
       interval: "daily"
+    commit-message:
+      # Conventional Commit prefix
+      prefix: "deps(java)"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       # Check for updates to GitHub Actions every week
       interval: "weekly"
+    commit-message:
+      # Conventional Commit prefix
+      prefix: "deps(CI)"
