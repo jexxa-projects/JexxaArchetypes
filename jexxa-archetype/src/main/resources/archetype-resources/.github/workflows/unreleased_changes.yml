@@ -3,7 +3,7 @@ name: Maintain Unreleased Changes
 on:
   push:
     branches:
-      - ${defaultBranchName}
+      - main
   workflow_call:
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
         env:
           USERNAME: 'Pull_Action_User'
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: git pull origin ${defaultBranchName} -r -X theirs
+        run: git pull origin main -r -X theirs
 
       - name: Create log file with unreleased changes
         uses: orhun/git-cliff-action@v2

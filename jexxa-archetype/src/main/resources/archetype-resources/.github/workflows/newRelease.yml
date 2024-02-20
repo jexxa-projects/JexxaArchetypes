@@ -75,7 +75,7 @@ jobs:
       - name: Commit Changelog
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: ${defaultBranchName}
+          branch: main
           commit_message: 'chore(doc): update Changelog'
           file_pattern: 'UNRELEASED_CHANGES.md CHANGELOG.md'
 
