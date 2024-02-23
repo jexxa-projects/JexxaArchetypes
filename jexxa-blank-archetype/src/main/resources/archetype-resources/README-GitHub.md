@@ -25,7 +25,7 @@ ${hash}${hash} Configure GitHub actions
 
     * Make your repository public to use ghcr or ensure that you have billing plan including access to ghcr.
   
-*   __Automatic dependencies updates via dependabot:__ 
+*   __Automatic dependencies updates via dependabot with changelog generation:__ 
 
     *   Create a personal access token (PAT) in developer settings, as described [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with `public_repo` access enabled.
 
@@ -42,10 +42,15 @@ We provide the following GitHub actions that are eithner started manually or aut
     *   __Description:__ Builds the project after each push
     *   __Started:__ Automatically and manually   
 
+*   [unreleased_changes.yml](${vcsRepository}/actions/workflows/unreleased_changes.yml):
+    *   __Description:__ Automatically maintains a file containing noteworthy changes made since the last release. Noteworthiness is determined through use of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+    *   __Started:__ Automatically only
+
 *   [newRelease.yml](${vcsRepository}/actions/workflows/newRelease.yml):
     *   __Description:__ Create a new release using maven via GitHub web page
     *   __Started:__ Manually only
     *   Please note that the first run might fail, because the link to the ghcr.io repository is automatically created, first time you try to access it. So, please run this action twice, as soon as you created the repo.
+    *   Also adds unreleased changes to the changelog.
 
 
 *   [autoMerge.yml](${vcsRepository}/actions/workflows/autoMerge.yml):
