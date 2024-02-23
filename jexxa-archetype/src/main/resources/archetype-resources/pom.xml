@@ -39,7 +39,7 @@
     <jexxa.release.version>7.0.3</jexxa.release.version>
     <addend.version>2.0.1</addend.version>
     <activemq.artemis.client.version>2.32.0</activemq.artemis.client.version>
-    <postgres.version>42.7.1</postgres.version>
+    <postgres.version>42.7.2</postgres.version>
     <slf4j.simple.version>2.0.12</slf4j.simple.version>
 
     <!-- version of test dependencies -->
@@ -74,8 +74,8 @@
     <maven.versions.plugin>2.16.2</maven.versions.plugin>
     <maven.build.helper.version>3.5.0</maven.build.helper.version>
     <maven.jib.plugin>3.4.0</maven.jib.plugin>
-    <maven.shade.plugin>3.5.1</maven.shade.plugin>
-    <maven.exec.plugin>3.1.1</maven.exec.plugin>
+    <maven.shade.plugin>3.5.2</maven.shade.plugin>
+    <maven.exec.plugin>3.2.0</maven.exec.plugin>
 
     <!-- command to start the application for integration tests -->
     <context.command.start>
