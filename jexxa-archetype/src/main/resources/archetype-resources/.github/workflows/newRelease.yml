@@ -55,7 +55,7 @@ jobs:
 
       # Automatically document commits in Conventional Commit format as changelog, i.e. the version bumps made by Dependabot
       - name: Update Changelog
-        uses: orhun/git-cliff-action@v2
+        uses: orhun/git-cliff-action@v3
         id: git-cliff
         with:
           config: cliff.toml
