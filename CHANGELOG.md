@@ -4,7 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## \[2.0.3] - 2024-mm-dd
+## \[2.1.0] - 2024-03-02
+### Added 
+- Automatically update CHANGELOG if conventional commit messages are used 
+
 ### Fixed
 - Default properties in JLegMed archetype use artifactID as default postgres schema
 - Excluded signature files from dependencies when building the fat jar. Otherwise, this will cause a security exception when starting the fat jar. 

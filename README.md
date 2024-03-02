@@ -15,7 +15,7 @@ This project provides the following Maven archetypes for a Jexxa or JLegMed appl
 
 *   [Architectural tests](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/architecture/ArchitectureTest.java) for _pattern language_, _ports & adapters architecture_, and _usage of aggregates_. 
 
-*   Predefined CI/CD pipeline for GitHub including automatic dependency updates 
+*   Predefined CI/CD pipeline for GitHub including automatic dependency and changelog updates
 
 ## Create your Project
 
