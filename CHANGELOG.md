@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## \[2.1.0] - 2024-03-02
+## \[3.0.0] - 2024-03-03
 ### Added 
 - Automatically update CHANGELOG if conventional commit messages are used 
 
@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Default properties in JLegMed archetype use artifactID as default postgres schema
 - Excluded signature files from dependencies when building the fat jar. Otherwise, this will cause a security exception when starting the fat jar. 
 - Updated dependencies 
+
+### Removed
+- `jexxa-archetype` since it is identical to jexxa tutorial [`bookstore`](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/README.md)  
 
 ## \[2.0.2] - 2024-01-11
 ### Fixed
