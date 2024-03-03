@@ -46,10 +46,6 @@ jobs:
         run: |
           mvn -B install --file pom.xml
 
-      - name: Build the project generated from jexxa-archetype
-        run: |          
-         cd ~/JexxaProject
-         mvn -B clean install
       - name: Generate project from jexxa-blank-archetype
         run: |
           cd ~
