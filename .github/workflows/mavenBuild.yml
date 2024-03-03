@@ -45,17 +45,7 @@ jobs:
       - name: Build with Maven
         run: |
           mvn -B install --file pom.xml
-      - name: Generate project from jexxa-archetype
-        run: |
-          cd ~
-          mvn -B archetype:generate \
-           -DarchetypeCatalog=local \
-           -DarchetypeGroupId=io.jexxa \
-           -DarchetypeArtifactId=jexxa-archetype \
-           -DarchetypeVersion=${{ env.RELEASE_VERSION }} \
-           -DprojectName=JexxaProject \
-           -DgroupId=com.github.jexxaproject \
-           -DgithubAccount=jexxa-projects
+
       - name: Build the project generated from jexxa-archetype
         run: |          
          cd ~/JexxaProject
