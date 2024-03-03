@@ -3,9 +3,9 @@
 # Jexxa-Projects Archetypes
 ## Summary
 This project provides the following Maven archetypes for a Jexxa or JLegMed application: 
-* `jlegmed-blank-archetype`: Generates a project for a JLegMed application including only source code that is part of all projects (such as a main-class).
-* `jexxa-blank-archetype`: Generates a project for a Jexxa application including only source code that is part of all projects (such as a main-class).  
-* `jexxa-archetype`: Generates a project including source code of [BookStore tutorial](https://github.com/jexxa-projects/JexxaTutorials/tree/main/BookStore). It is recommended if you want to play around with existing source code to get familiar with Jexxa and/or ports and adapter architecture. 
+* `jlegmed-blank-archetype`: Generates a project for a [JLegMed application](https://jlegmed.jexxa.io/) including only source code that is part of all projects (such as a main-class).
+* `jexxa-blank-archetype`: Generates a project for a [Jexxa application](https://www.jexxa.io) including only source code that is part of all projects (such as a main-class).  
+
 
 ## Features
 
@@ -44,15 +44,6 @@ mvn -B archetype:generate \
   -DgithubAccount=jexxa-projects
 ```
 
-For `jexxa-archetype` use: 
-```bash 
-mvn -B archetype:generate \
-  -DarchetypeGroupId=io.jexxa \
-  -DarchetypeArtifactId=jexxa-archetype \
-  -DprojectName=JexxaProject \
-  -DgroupId=com.github.jexxaproject \
-  -DgithubAccount=jexxa-projects
-```
 
 ### Create a new project in IntelliJ
 
