@@ -38,7 +38,7 @@
     <!-- version of dependencies -->
     <jlegmed.core.version>2.0.0</jlegmed.core.version>
     <activemq.artemis.client.version>2.32.0</activemq.artemis.client.version>
-    <postgres.version>42.7.2</postgres.version>
+    <postgres.version>42.7.3</postgres.version>
     <slf4j.simple.version>2.0.12</slf4j.simple.version>
 
     <!-- version of test dependencies -->
