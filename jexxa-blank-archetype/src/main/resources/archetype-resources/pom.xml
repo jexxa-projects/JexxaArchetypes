@@ -46,7 +46,7 @@
     <junit.platform.launcher.version>1.10.2</junit.platform.launcher.version>
     <junit.jupiter.engine.version>5.10.2</junit.jupiter.engine.version>
     <junit.jupiter.params.version>5.10.2</junit.jupiter.params.version>
-    <awaitility.version>4.2.0</awaitility.version>
+    <awaitility.version>4.2.1</awaitility.version>
     <unirest.java.version>3.14.5</unirest.java.version>
 
     <!-- server-name used in mavens settings.xml to find to your repository credentials -->
