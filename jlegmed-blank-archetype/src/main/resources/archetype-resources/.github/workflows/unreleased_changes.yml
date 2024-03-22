@@ -37,7 +37,7 @@ jobs:
         uses: orhun/git-cliff-action@v3
         id: git-cliff
         with:
-          config: cliff.toml
+          config: .github/workflows/config/cliff.toml
           args: -v --unreleased --strip header
         env:
           OUTPUT: UNRELEASED_CHANGES.md

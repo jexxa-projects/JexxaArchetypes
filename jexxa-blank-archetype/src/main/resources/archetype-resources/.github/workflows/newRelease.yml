@@ -58,7 +58,7 @@ jobs:
         uses: orhun/git-cliff-action@v2
         id: git-cliff
         with:
-          config: cliff.toml
+          config: .github/workflows/config/cliff.toml
           args: -v --unreleased --tag ${dollar}{{steps.get_version.outputs.version}} --prepend CHANGELOG.md
         env:
           OUTPUT: TEMP.md

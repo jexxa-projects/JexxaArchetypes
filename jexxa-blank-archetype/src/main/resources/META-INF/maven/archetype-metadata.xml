@@ -52,6 +52,7 @@
       <directory>.github</directory>
       <includes>
         <include>**/*.yml</include>
+        <include>**/cliff.toml</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">
@@ -65,7 +66,6 @@
       <includes>
         <include>README.md</include>
         <include>README-GitHub.md</include>
-        <include>cliff.toml</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
