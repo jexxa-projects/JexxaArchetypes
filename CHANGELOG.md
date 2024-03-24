@@ -4,9 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## \[3.0.1] - 2024-03-24
+### Fixed
+- Location of git-cliff file is now located in the workflow directory
+- Updated dependencies
+
 ## \[3.0.0] - 2024-03-03
 ### Added 
 - Automatically update CHANGELOG if conventional commit messages are used 
+- Automatically update CHANGELOG for dependabot updates
 
 ### Fixed
 - Default properties in JLegMed archetype use artifactID as default postgres schema
