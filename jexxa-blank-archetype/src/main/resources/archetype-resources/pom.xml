@@ -34,6 +34,7 @@
     <docker.base.image>eclipse-temurin:${javaVersion}-jre-alpine</docker.base.image>
     <docker.user>guest</docker.user> <!-- Defines the user running the application inside the container. Note: This user must be already created inside the base image -->
     <image.repository.root>${containerRegistry}</image.repository.root>
+    <image.directory>${parent.artifactId}</image.directory>
 
     <!-- version of dependencies -->
     <jexxa.release.version>8.0.2</jexxa.release.version>
@@ -466,7 +467,7 @@
             <image>${docker.base.image}</image>
           </from>
           <to>
-            <image>${image.repository.root}/${project.artifactId}:${project.version}</image>
+            <image>${image.repository.root}/${image.directory}/${project.artifactId}:${project.version}</image>
             <tags>
               <!--suppress UnresolvedMavenProperty -->
               <tag>${dockerTag}</tag>
