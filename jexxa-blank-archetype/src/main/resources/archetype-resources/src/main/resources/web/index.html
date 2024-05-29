@@ -12,7 +12,7 @@
 <h1 id = "contextName">Context Name: </h1>
 
 <script>
-    const BASE_URL = window.location.protocol + '//' + location.host +'/BoundedContext';
+    const BASE_URL = location.href.substring(0, location.href.lastIndexOf('/')) ;
 
     const appendToDOM = (message) => {
         document
@@ -21,7 +21,8 @@
     };
 
     const fetchGreetings = () => {
-        fetch(`${symbol_dollar}{BASE_URL}/contextName`)
+        console.log(`${symbol_dollar}{BASE_URL}`);
+        fetch(`${symbol_dollar}{BASE_URL}/BoundedContext/contextName`)
             .then( response => {
                 if (!response.ok) {
                     throw Error(response.statusText);
