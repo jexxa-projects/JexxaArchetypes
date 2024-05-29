@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## \[3.0.2] - 2024-05-29
+### Fixed
+- [jexxa-blank-archetype] Fixed template web page 
+- Fixed default path for docker image in ghcr so that artifactid is used as directory name 
+- Updated dependencies
+
 ## \[3.0.1] - 2024-03-24
 ### Fixed
 - Location of git-cliff file is now located in the workflow directory
