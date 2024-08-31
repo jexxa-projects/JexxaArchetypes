@@ -37,7 +37,7 @@
     <image.directory>${parent.artifactId}</image.directory>
 
     <!-- version of dependencies -->
-    <jexxa.release.version>8.1.1</jexxa.release.version>
+    <jexxa.release.version>8.1.2</jexxa.release.version>
     <addend.version>2.0.1</addend.version>
     <activemq.artemis.client.version>2.37.0</activemq.artemis.client.version>
     <postgres.version>42.7.4</postgres.version>
