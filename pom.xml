@@ -50,7 +50,7 @@
     <maven.enforcer.plugin>3.5.0</maven.enforcer.plugin>
     <maven.versions.plugin>2.16.0</maven.versions.plugin>
     <maven.archetype.plugin>3.3.0</maven.archetype.plugin>
-    <maven.archetype.packaging>3.2.1</maven.archetype.packaging>
+    <maven.archetype.packaging>3.3.0</maven.archetype.packaging>
 
     <project.scm.id>github-Jexxa</project.scm.id>
 
