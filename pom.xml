@@ -37,7 +37,7 @@
 
   <properties>
     <!--version of  maven plugins  -->
-    <gpg.plugin.version>3.2.5</gpg.plugin.version>
+    <gpg.plugin.version>3.2.7</gpg.plugin.version>
     <maven.clean.plugin>3.3.1</maven.clean.plugin>
     <maven.compiler.plugin>3.11.0</maven.compiler.plugin>
     <maven.deploy.plugin>3.1.1</maven.deploy.plugin>
@@ -49,8 +49,8 @@
     <maven.release.plugin>3.1.1</maven.release.plugin>
     <maven.enforcer.plugin>3.5.0</maven.enforcer.plugin>
     <maven.versions.plugin>2.16.0</maven.versions.plugin>
-    <maven.archetype.plugin>3.2.1</maven.archetype.plugin>
-    <maven.archetype.packaging>3.2.1</maven.archetype.packaging>
+    <maven.archetype.plugin>3.3.0</maven.archetype.plugin>
+    <maven.archetype.packaging>3.3.0</maven.archetype.packaging>
 
     <project.scm.id>github-Jexxa</project.scm.id>
 
