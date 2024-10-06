@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[3.0.6] - 2024-10-ß6
 - Updated dependencies
-- 
+
 ## \[3.0.5] - 2024-08-31
 - Updated dependencies
 
