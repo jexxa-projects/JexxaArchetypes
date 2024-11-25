@@ -465,6 +465,16 @@
         <configuration>
           <from>
             <image>${docker.base.image}</image>
+            <platforms>
+              <platform>
+                <architecture>amd64</architecture>
+                <os>linux</os>
+              </platform>
+              <platform>
+                <architecture>arm64</architecture>
+                <os>linux</os>
+              </platform>
+            </platforms>
           </from>
           <to>
             <image>${image.repository.root}/${image.directory}/${project.artifactId}:${project.version}</image>
