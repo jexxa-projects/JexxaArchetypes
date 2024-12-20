@@ -39,7 +39,7 @@
     <!-- version of dependencies -->
     <jexxa.release.version>8.1.5</jexxa.release.version>
     <addend.version>2.0.2</addend.version>
-    <activemq.artemis.client.version>2.38.0</activemq.artemis.client.version>
+    <activemq.artemis.client.version>2.39.0</activemq.artemis.client.version>
     <postgres.version>42.7.4</postgres.version>
     <slf4j.simple.version>2.0.16</slf4j.simple.version>
 
