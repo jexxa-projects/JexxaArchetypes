@@ -51,6 +51,7 @@
     <maven.versions.plugin>2.16.0</maven.versions.plugin>
     <maven.archetype.plugin>3.4.0</maven.archetype.plugin>
     <maven.archetype.packaging>3.4.0</maven.archetype.packaging>
+    <maven.central.publishing.plugin>0.7.0</maven.central.publishing.plugin>
 
     <project.scm.id>github-Jexxa</project.scm.id>
 
@@ -111,6 +112,16 @@
            <arguments>-Psign-artifacts</arguments>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>${maven.central.publishing.plugin}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+          <autoPublish>true</autoPublish>
+        </configuration>
+      </plugin>
     </plugins>
 
     <pluginManagement>
@@ -163,20 +174,6 @@
     </profile>
   </profiles>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>oss.sonatype.org</id>
-      <name>Jexxa snapshot</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      <uniqueVersion>true</uniqueVersion>
-    </snapshotRepository>
-     <repository>
-      <id>oss.sonatype.org</id>
-      <name>Jexxa Maven Packages</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-      <uniqueVersion>true</uniqueVersion>
-    </repository>
-  </distributionManagement>
   <modules>
     <module>jexxa-blank-archetype</module>
     <module>jlegmed-blank-archetype</module>
