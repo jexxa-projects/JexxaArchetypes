@@ -37,7 +37,7 @@
     <image.directory>${parent.artifactId}</image.directory>
 
     <!-- version of dependencies -->
-    <jlegmed.core.version>3.5.7</jlegmed.core.version>
+    <jlegmed.core.version>3.5.8</jlegmed.core.version>
     <activemq.artemis.client.version>2.41.0</activemq.artemis.client.version>
     <postgres.version>42.7.7</postgres.version>
     <slf4j.simple.version>2.0.17</slf4j.simple.version>
