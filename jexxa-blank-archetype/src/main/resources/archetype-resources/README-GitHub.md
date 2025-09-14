@@ -4,10 +4,10 @@ ${hash} Set up your Project on GitHub
 ${hash}${hash} Init GitHub repository
 
 * Create Repository via the following [URL](https://github.com/new)
-  * Set repository name to ${projectName} 
-  * Set visibility of the project. Note: To use GitHub's container registry ghcr, either make your repository public or ensure that you have billing plan including access to ghcr. 
-  * Set owner for this project which is either your GitHub account, or one of your GitHub organizations
-  * __For simplicity reason, please do not add any other files such as a README, LICENSE, or .gitignore before pushing the maven project into this repo as decribed in the next steps.__
+  * Set the repository name to ${projectName} 
+  * Set the visibility of the project. Note: To use GitHub's container registry ghcr, either make your repository public or ensure that you have a billing plan including access to ghcr. 
+  * Set the owner for this project which is either your GitHub account or one of your GitHub organizations
+  * __For simplicity reasons, please do not add any other files such as a README, LICENSE, or .gitignore before pushing the maven project into this repo as described in the next steps.__
 * On your local system execute the following commands in the project directory:
     ```
     git init
@@ -23,7 +23,7 @@ ${hash}${hash} Configure GitHub actions
 
 *   __Docker image:__
 
-    * Make your repository public to use ghcr or ensure that you have billing plan including access to ghcr.
+    * Make your repository public to use ghcr or ensure that you have a billing plan including access to ghcr.
   
 *   __Automatic dependencies updates via dependabot with changelog generation:__ 
 
@@ -36,25 +36,25 @@ ${hash}${hash} Configure GitHub actions
 
 ${hash}${hash} Using GitHub actions
 
-We provide the following GitHub actions that are eithner started manually or automatically. To validate the actions start all actions with start option `manually`:  
+We provide the following GitHub actions that are either started manually or automatically. To validate the actions start all actions with start option `manually`:  
 
 *   [mavenBuild.yml](${vcsRepository}/actions/workflows/mavenBuild.yml):
     *   __Description:__ Builds the project after each push
     *   __Started:__ Automatically and manually   
 
 *   [unreleased_changes.yml](${vcsRepository}/actions/workflows/unreleased_changes.yml):
-    *   __Description:__ Automatically maintains a file containing noteworthy changes made since the last release. Noteworthiness is determined through use of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+    *   __Description:__ Automatically maintains a file containing noteworthy changes made since the last release. Noteworthiness is determined through the use of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
     *   __Started:__ Automatically only
 
 *   [newRelease.yml](${vcsRepository}/actions/workflows/newRelease.yml):
     *   __Description:__ Create a new release using maven via GitHub web page
     *   __Started:__ Manually only
-    *   Please note that the first run might fail, because the link to the ghcr.io repository is automatically created, first time you try to access it. So, please run this action twice, as soon as you created the repo.
+    *   Please note that the first run might fail because the link to the ghcr.io repository is automatically created the first time you try to access it. So, please run this action twice, as soon as you created the repo.
     *   Also adds unreleased changes to the changelog.
 
 
 *   [autoMerge.yml](${vcsRepository}/actions/workflows/autoMerge.yml):
-    *   __Description:__ Automatic merge of dependency updates with new patch or minor versions of dependencies from Dependabot. See https://github.com/ridedott/merge-me-action for more information.
+    *   __Description:__ Automatic merge of dependency updates with a new patch or minor versions of dependencies from Dependabot. See https://github.com/ridedott/merge-me-action for more information.
     *   __Started:__ Automatically only
 
 *   [dependabot.yml](${vcsRepository}/actions/workflows/dependabot.yml):
@@ -63,7 +63,7 @@ We provide the following GitHub actions that are eithner started manually or aut
 
 ${hash}${hash} Deployment 
 
-In the following we assume a docker-swarm setup which is a typical starting point for clustering your container.
+In this section we assume a docker-swarm setup, which is a typical starting point for clustering your container.
 In addition, it can be easily run and maintained on your developing machine. 
 
 ${hash}${hash}${hash} Docker-Stacks

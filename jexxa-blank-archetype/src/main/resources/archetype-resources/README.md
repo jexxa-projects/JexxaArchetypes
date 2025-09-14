@@ -15,7 +15,7 @@ ${hash}${hash}  Requirements
 
 ${hash}${hash} Build the Project
 
-*   Checkout the new project in your favorite IDE
+*   Check out the new project in your favorite IDE
 
 *   Without running [developer stack](deploy/developerStack.yml):
     ```shell
@@ -31,7 +31,7 @@ ${hash}${hash} Build the Project
     java -jar "-Dio.jexxa.config.import=src/test/resources/jexxa-test.properties" target/${artifactId.toLowerCase()}-jar-with-dependencies.jar
     ```
 
-*   Now you can use `curl` to access your application, or open  [http://localhost:7503/BoundedContext/isRunning](http://localhost:7503/BoundedContext/isRunning) in your browser:
+*   Now you can use `curl` to access your application, or open [http://localhost:7503/BoundedContext/isRunning](http://localhost:7503/BoundedContext/isRunning) in your browser:
     ```Console
     curl -X GET  http://localhost:7503/BoundedContext/isRunning
     ```
@@ -48,7 +48,7 @@ ${hash}${hash}${hash} Set up your project on GitHub
 To continuously build and deploy your application, we recommend using GitHub as described [here](README-GitHub.md).
 
 ${hash}${hash}${hash} Package Structure
-To organize our code we recommend the following package structure that is based on the concepts of Domain Driven Design:
+To organize our code, we recommend the following package structure based on the concepts of Domain Driven Design:
 
 ``` 
 (${package})
@@ -69,4 +69,4 @@ To organize our code we recommend the following package structure that is based 
 
 ${hash}${hash}${hash} Cleanup Readme
 
-After successfully set up your new project, you should clean up the text of README as described [here](https://www.makeareadme.com)    
+After successfully setting up your new project, you should clean up the text of README as described [here](https://www.makeareadme.com)    

@@ -40,7 +40,7 @@ services:
       AMQ_EXTRA_ARGS: --relax-jolokia
 
   Postgres:
-    image: postgres:16
+    image: postgres:17
     user: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
