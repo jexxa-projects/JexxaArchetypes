@@ -11,25 +11,6 @@ services:
       - ActiveMQ
       - Postgres
 
-#    healthcheck:
-#      test: ["CMD-SHELL", "wget -nv -t1 --spider 'http://localhost:7500/BoundedContext/isRunning/'"]
-#      interval: 10s
-#      timeout: 10s
-#      retries: 3
-
-    deploy:   # configure zero downtime deployment
-      replicas: 2
-      update_config:
-        order: start-first
-        failure_action: rollback
-
-      rollback_config:
-        parallelism: 1
-        order: start-first
-
-      restart_policy:
-        condition: on-failure
-
   ### Infrastructure ###
 
   ActiveMQ:
@@ -40,7 +21,7 @@ services:
       AMQ_EXTRA_ARGS: --relax-jolokia
 
   Postgres:
-    image: postgres:16
+    image: postgres:17
     user: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data

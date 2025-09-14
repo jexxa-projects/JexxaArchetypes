@@ -15,7 +15,7 @@ ${hash}${hash}  Requirements
 
 ${hash}${hash} Build the Project
 
-*   Checkout the new project in your favorite IDE
+*   Check out the new project in your favorite IDE
 
 *   [Optional] **With** running [developer stack](deploy/developerStack.yml):
     ```shell
@@ -32,21 +32,25 @@ ${hash}${hash}${hash} Set up your project on GitHub
 To continuously build and deploy your application, we recommend using GitHub as described [here](README-GitHub.md).
 
 ${hash}${hash}${hash} Package Structure
-To organize our code we recommend the following package structure:
+To organize our code, we recommend the following package structure. Since messages are treated as first-class objects, we strongly recommend a fine-grained packages structure:
 
 ``` 
 (${package})
-    plugins
+    flowgraph // Provides app specific flow graphs 
+    plugins   // Provides app specific filter 
     |    <technology 1>
     |    ...
     |    <technology n>
-    dto  
-    |    <use case 1>
-    |    ...
-    |    <use case n>
-    ${projectName}.java
+    dto
+        |    consumedmessage  // Messages received by the app
+        |    publishedmessage // Messages published by the app
+        |    domainevent      // Domain events published by the app
+        |    telemetrydata    // Telemetry data published by the app
+        |    flowdata         // Data structures used only within the app
+        |    flowerror        // Exceptions occurred during processing
+ 
 ```
 
 ${hash}${hash}${hash} Cleanup Readme
 
-After successfully set up your new project, you should clean up the text of README as described [here](https://www.makeareadme.com)    
+After successfully setting up your new project, you should clean up the text of README as described [here](https://www.makeareadme.com)    
