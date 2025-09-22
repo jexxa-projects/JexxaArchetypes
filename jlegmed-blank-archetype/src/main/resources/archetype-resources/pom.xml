@@ -34,7 +34,7 @@
     <docker.base.image>amazoncorretto:${javaVersion}-alpine</docker.base.image>
     <docker.user>guest</docker.user> <!-- Defines the user running the application inside the container. Note: This user must be already created inside the base image -->
     <image.repository.root>${containerRegistry}</image.repository.root>
-    <image.directory>${parent.artifactId}</image.directory>
+    <image.directory>${artifactId}</image.directory>
 
     <!-- version of dependencies -->
     <jlegmed.core.version>4.4.0</jlegmed.core.version>
