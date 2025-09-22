@@ -9,7 +9,7 @@ This project provides the following Maven archetypes for a Jexxa or JLegMed appl
 
 ## Features
 
-*   Build your first Jexxa- or JLegMed project as self-contained jar and/or docker image
+*   Build your first Jexxa- or JLegMed project as a self-contained jar and/or docker image
 
 *   Template for [Unit-](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/domain/book/BookTest.java), [Stub-](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/applicationservice/BookStoreServiceTest.java) and [Integration tests](https://github.com/jexxa-projects/JexxaTutorials/blob/main/BookStore/src/test/java/io/jexxa/tutorials/bookstore/integration/BookstoreIT.java)
 
@@ -69,8 +69,8 @@ Special Note:
 | `githubAccount`     | Specifies the GitHub account or organization that owns the repository                                            | `jexxa-projects`                          | None. It must be defined <br />to use included GitHub-Actions                                       | 
 | `vcsRepository`     | Defines the URL of used VCS repository.                                                                          | `https://github.com/jexxa-projects/jexxa` | `https://github.com /<githubAccount>/<projectName>`                                                 | 
 | `containerRegistry` | Defines the URL of used container registry.                                                                      | `ghcr.io/jexxa-projects`                  | `ghcr.io/<githubAccount>`                                                                           | 
-| `javaVersion`       | Defines the used SDK Version. Note: You need at least Java17                                                     | `21`                                      | `21`                                                                                                | 
+| `javaVersion`       | Defines the used SDK Version. Note: You need at least Java17                                                     | `25`                                      | `25`                                                                                                | 
 
 ## Run the Project 
 
-Please follow the README.md in created project directory how to run the project 
+Please follow the README.md in the created project directory how to run the project 
