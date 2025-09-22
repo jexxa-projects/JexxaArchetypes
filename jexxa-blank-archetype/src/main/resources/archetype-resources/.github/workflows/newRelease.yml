@@ -83,7 +83,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           java-version: '${javaVersion}'
-          distribution: 'temurin'
+          distribution: 'corretto'
           server-id: github
           cache: maven
       # configure git for building a new release

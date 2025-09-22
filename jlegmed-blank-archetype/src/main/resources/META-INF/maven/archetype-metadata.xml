@@ -12,7 +12,7 @@
     <requiredProperty key="githubAccount">      </requiredProperty>
     <requiredProperty key="vcsRepository">      <defaultValue>https://github.com/${githubAccount}/${projectName}</defaultValue></requiredProperty>
     <requiredProperty key="containerRegistry"> <defaultValue>ghcr.io/${githubAccount}</defaultValue></requiredProperty>
-    <requiredProperty key="javaVersion">        <defaultValue>21</defaultValue></requiredProperty>
+    <requiredProperty key="javaVersion">        <defaultValue>25</defaultValue></requiredProperty>
   </requiredProperties>
 
   <fileSets>

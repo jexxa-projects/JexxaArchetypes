@@ -35,7 +35,7 @@ jobs:
       - name: Set up JDK ${javaVersion}
         uses: actions/setup-java@v5
         with:
-          distribution: 'temurin'
+          distribution: 'corretto'
           java-version: ${javaVersion}
       - name: Build with Maven
         run: mvn -B install --file pom.xml
