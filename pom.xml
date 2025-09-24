@@ -51,7 +51,7 @@
     <maven.versions.plugin>2.16.0</maven.versions.plugin>
     <maven.archetype.plugin>3.4.0</maven.archetype.plugin>
     <maven.archetype.packaging>3.4.0</maven.archetype.packaging>
-    <maven.central.publishing.plugin>0.8.0</maven.central.publishing.plugin>
+    <maven.central.publishing.plugin>0.9.0</maven.central.publishing.plugin>
 
     <project.scm.id>github-Jexxa</project.scm.id>
 
