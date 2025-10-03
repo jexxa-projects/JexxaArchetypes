@@ -70,7 +70,7 @@
     <maven.release.plugin>3.0.0-M1</maven.release.plugin>
     <maven.jacoco.plugin>0.8.13</maven.jacoco.plugin>
     <maven.reports.plugin>3.9.0</maven.reports.plugin>
-    <maven.enforcer.plugin>3.6.1</maven.enforcer.plugin>
+    <maven.enforcer.plugin>3.6.2</maven.enforcer.plugin>
     <maven.javadoc.plugin>3.2.0</maven.javadoc.plugin>
     <maven.versions.plugin>2.19.1</maven.versions.plugin>
     <maven.build.helper.version>3.6.1</maven.build.helper.version>
