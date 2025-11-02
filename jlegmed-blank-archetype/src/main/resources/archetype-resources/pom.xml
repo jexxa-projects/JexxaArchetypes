@@ -79,7 +79,7 @@
 
     <!-- command to start the application for integration tests -->
     <context.command.start>
-          -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec,port=6300,output=tcpserver
+          -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${maven.jacoco.plugin}/org.jacoco.agent-${maven.jacoco.plugin}-runtime.jar=destfile=jacoco-it-app.exec
           -jar -Djlegmed.config.import=./src/test/resources/jlegmed-test.properties ${project.build.directory}/${project.artifactId}-jar-with-dependencies.jar
     </context.command.start>
   </properties>
@@ -583,17 +583,6 @@
                   Ensures that the code coverage report for integration tests after
                   integration tests have been run.
               -->
-              <execution>
-                <id>post-integration-test-dump</id>
-                <phase>post-integration-test</phase>
-                <goals>
-                  <goal>dump</goal>
-                </goals>
-                <configuration>
-                  <!-- Sets the path to the file which contains the execution data. -->
-                  <destFile>${project.build.directory}/coverage-reports/jacoco-it-application.exec</destFile>
-                </configuration>
-              </execution>
               <execution>
                 <id>post-integration-test-report</id>
                 <phase>post-integration-test</phase>
