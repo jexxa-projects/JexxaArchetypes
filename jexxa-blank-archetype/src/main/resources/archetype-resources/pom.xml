@@ -39,7 +39,7 @@
     <!-- version of dependencies -->
     <jexxa.release.version>8.1.15</jexxa.release.version>
     <addend.version>2.0.3</addend.version>
-    <activemq.artemis.client.version>2.42.0</activemq.artemis.client.version>
+    <activemq.artemis.client.version>2.43.0</activemq.artemis.client.version>
     <postgres.version>42.7.8</postgres.version>
     <slf4j.simple.version>2.0.17</slf4j.simple.version>
 
@@ -68,15 +68,15 @@
     <maven.site.plugin>3.21.0</maven.site.plugin>
     <maven.surefire.plugin>3.5.4</maven.surefire.plugin>
     <maven.release.plugin>3.0.0-M1</maven.release.plugin>
-    <maven.jacoco.plugin>0.8.13</maven.jacoco.plugin>
+    <maven.jacoco.plugin>0.8.14</maven.jacoco.plugin>
     <maven.reports.plugin>3.9.0</maven.reports.plugin>
-    <maven.enforcer.plugin>3.6.1</maven.enforcer.plugin>
+    <maven.enforcer.plugin>3.6.2</maven.enforcer.plugin>
     <maven.javadoc.plugin>3.2.0</maven.javadoc.plugin>
     <maven.versions.plugin>2.19.1</maven.versions.plugin>
     <maven.build.helper.version>3.6.1</maven.build.helper.version>
     <maven.jib.plugin>3.4.6</maven.jib.plugin>
     <maven.shade.plugin>3.6.1</maven.shade.plugin>
-    <maven.exec.plugin>3.6.0</maven.exec.plugin>
+    <maven.exec.plugin>3.6.2</maven.exec.plugin>
 
     <!-- command to start the application for integration tests -->
     <context.command.start>

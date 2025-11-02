@@ -43,7 +43,7 @@ jobs:
           OUTPUT: UNRELEASED_CHANGES.md
 
       - name: Commit UNRELEASED_CHANGES.md
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: main
           commit_message: 'chore(doc): maintain UNRELEASED_CHANGES.md'
