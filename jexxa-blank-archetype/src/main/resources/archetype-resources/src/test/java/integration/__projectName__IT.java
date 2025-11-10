@@ -21,7 +21,7 @@ class  ${projectName}IT
     static void initBeforeAll()
     {
         jexxaIntegrationTest = new JexxaIntegrationTest(${projectName}.class);
-        restBinding = jexxaIntegrationTest.getRESTBinding();
+        restBinding = jexxaIntegrationTest.getBinding(RESTBinding.class);
     }
 
 
