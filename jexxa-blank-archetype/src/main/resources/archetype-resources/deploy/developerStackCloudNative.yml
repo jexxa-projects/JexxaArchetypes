@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+
+  redpanda:
+    image: redpandadata/redpanda
+    command: >
+      redpanda start
+        --overprovisioned
+        --smp 1
+        --memory 1G
+        --reserve-memory 0M
+        --node-id 0
+        --check=false
+        --kafka-addr INSIDE://0.0.0.0:29092,OUTSIDE://0.0.0.0:9092
+        --advertise-kafka-addr INSIDE://redpanda:29092,OUTSIDE://localhost:9092
+        --pandaproxy-addr 0.0.0.0:8082
+        --schema-registry-addr 0.0.0.0:8081
+
+    ports:
+      - "9092:9092"      # Kafka
+      - "8081:8081"      # Schema Registry
+      - "8082:8082"      # REST Proxy
+
+  redpanda-console:
+    image: redpandadata/console:latest
+
+    ports:
+      - "9081:8080"
+    environment:
+      KAFKA_BROKERS: redpanda:29092
+      SCHEMAREGISTRY_ENABLED: "true"
+      SCHEMAREGISTRY_URLS: http://redpanda:8081
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    ports:
+      - "8100:9000"   # S3 API
+      - "8101:9001"   # Web UI
+    environment:
+      MINIO_ROOT_USER: minioadmin      # Admin Access Key
+      MINIO_ROOT_PASSWORD: minioadmin  # Admin Secret Key
+    volumes:
+      - minio_data:/data
+
+volumes:
+  minio_data:
