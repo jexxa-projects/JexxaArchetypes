@@ -38,7 +38,7 @@ jobs:
           password: ${dollar}{{ secrets.GITHUB_TOKEN }}
 
       # Checkout repository
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           # Enables compiling the changelog when creating the new release by fetching the commit-history
           fetch-depth: 0
