@@ -72,7 +72,7 @@
     <maven.reports.plugin>3.9.0</maven.reports.plugin>
     <maven.enforcer.plugin>3.6.2</maven.enforcer.plugin>
     <maven.javadoc.plugin>3.2.0</maven.javadoc.plugin>
-    <maven.versions.plugin>2.20.0</maven.versions.plugin>
+    <maven.versions.plugin>2.20.1</maven.versions.plugin>
     <maven.build.helper.version>3.6.1</maven.build.helper.version>
     <maven.jib.plugin>3.5.1</maven.jib.plugin>
     <maven.shade.plugin>3.6.1</maven.shade.plugin>
