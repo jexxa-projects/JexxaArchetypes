@@ -46,7 +46,7 @@
     <maven.jar.plugin>3.3.0</maven.jar.plugin>
     <maven.resources.plugin>3.3.1</maven.resources.plugin>
     <maven.site.plugin>4.0.0-M9</maven.site.plugin>
-    <maven.release.plugin>3.2.0</maven.release.plugin>
+    <maven.release.plugin>3.3.0</maven.release.plugin>
     <maven.enforcer.plugin>3.6.2</maven.enforcer.plugin>
     <maven.versions.plugin>2.16.0</maven.versions.plugin>
     <maven.archetype.plugin>3.4.1</maven.archetype.plugin>
