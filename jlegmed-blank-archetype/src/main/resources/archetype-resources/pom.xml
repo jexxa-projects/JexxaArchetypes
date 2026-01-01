@@ -113,6 +113,13 @@
 
     <!-- Dependencies required for tests -->
     <dependency>
+      <groupId>io.jexxa.jlegmed</groupId>
+      <artifactId>jlegmed-test</artifactId>
+      <version>${jlegmed.core.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-launcher</artifactId>
       <version>${junit.platform.launcher.version}</version>
