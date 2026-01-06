@@ -37,6 +37,14 @@ jobs:
           username: ${dollar}{{ github.actor }}
           password: ${dollar}{{ secrets.GITHUB_TOKEN }}
 
+      - name: Set up JDK ${javaVersion}
+        uses: actions/setup-java@v5
+        with:
+          java-version: '${javaVersion}'
+          distribution: 'corretto'
+          server-id: github
+          cache: maven
+
       # Checkout repository
       - uses: actions/checkout@v6
         with:
@@ -79,13 +87,6 @@ jobs:
           commit_message: 'chore(doc): update Changelog'
           file_pattern: 'UNRELEASED_CHANGES.md CHANGELOG.md'
 
-      - name: Set up JDK ${javaVersion}
-        uses: actions/setup-java@v5
-        with:
-          java-version: '${javaVersion}'
-          distribution: 'corretto'
-          server-id: github
-          cache: maven
       # configure git for building a new release
       - name: Configure Git user
         run: |
