@@ -37,14 +37,6 @@ jobs:
           username: ${dollar}{{ github.actor }}
           password: ${dollar}{{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up JDK ${javaVersion}
-        uses: actions/setup-java@v5
-        with:
-          java-version: '${javaVersion}'
-          distribution: 'corretto'
-          server-id: github
-          cache: maven
-
       # Checkout repository
       - uses: actions/checkout@v6
         with:
@@ -52,6 +44,14 @@ jobs:
           fetch-depth: 0
           # Improves efficiency of this action by only downloading necessary data (see filter option of git clone)
           filter: tree:0
+
+      - name: Set up JDK ${javaVersion}
+        uses: actions/setup-java@v5
+        with:
+          java-version: '${javaVersion}'
+          distribution: 'corretto'
+          server-id: github
+          cache: maven
 
       # Enables the changelog to include the version number of the new release
       - name: Get version number
