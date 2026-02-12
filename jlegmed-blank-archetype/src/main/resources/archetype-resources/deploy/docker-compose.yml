@@ -5,6 +5,7 @@ services:
 
   ${projectName}:
     image: ${containerRegistry}/${artifactId.toLowerCase()}/${artifactId.toLowerCase()}:latest
+    stop_grace_period: 60s
     ports:
       - "7508:7500" # Optional: Adjust HTTP Port "<free HTTP-Port>:7500"
     depends_on:
@@ -21,7 +22,8 @@ services:
       AMQ_EXTRA_ARGS: --relax-jolokia
 
   Postgres:
-    image: postgres:17
+    image: postgres:18
+    stop_grace_period: 120s
     user: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
