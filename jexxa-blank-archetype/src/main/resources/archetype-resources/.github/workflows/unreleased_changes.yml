@@ -23,8 +23,6 @@ jobs:
         with:
           # Enables compiling the changelog when creating the new release by fetching the commit-history
           fetch-depth: 0
-          # Improves efficiency of this action by only downloading necessary data (see filter option of git clone)
-          filter: tree:0
 
       # Ensures that no unreleased changes are missed when multiple instances of this workflow are triggered at the same time
       - name: Pull latest changes

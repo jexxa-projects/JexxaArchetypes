@@ -42,8 +42,6 @@ jobs:
         with:
           # Enables compiling the changelog when creating the new release by fetching the commit-history
           fetch-depth: 0
-          # Improves efficiency of this action by only downloading necessary data (see filter option of git clone)
-          filter: tree:0
 
       - name: Set up JDK ${javaVersion}
         uses: actions/setup-java@v5
