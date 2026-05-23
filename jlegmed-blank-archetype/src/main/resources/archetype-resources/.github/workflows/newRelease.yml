@@ -93,6 +93,11 @@ jobs:
 
       # Build the new release
       - name: Create new release
-        run: mvn -B  -P '!dockerDeveloperTags' -P integrationTests release:prepare release:perform
+        run: |
+          mvn -B \
+            -P '!dockerDeveloperTags' \
+            -P integrationTests \
+            -Darguments="-Djib.maxConcurrentConnections=1 -Djib.serializePostExports=true" \
+            release:prepare release:perform
         env:
-          GITHUB_TOKEN: ${dollar}{{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
