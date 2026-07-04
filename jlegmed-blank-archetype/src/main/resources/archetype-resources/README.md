@@ -37,6 +37,9 @@ To organize our code, we recommend the following package structure. Since messag
 ``` 
 (${package})
     flowgraph // Provides app specific flow graphs 
+    |    contract         // Data structures used between filters
+    |    error            // Exceptions or error structs occurred during processing
+
     plugins   // Provides app specific filter 
     |    <technology 1>
     |    ...
@@ -46,8 +49,6 @@ To organize our code, we recommend the following package structure. Since messag
         |    publishedmessage // Messages published by the app
         |    domainevent      // Domain events published by the app
         |    telemetrydata    // Telemetry data published by the app
-        |    flowdata         // Data structures used only within the app
-        |    flowerror        // Exceptions occurred during processing
  
 ```
 
