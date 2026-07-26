@@ -37,7 +37,7 @@
     <image.directory>${artifactId}</image.directory>
 
     <!-- version of dependencies -->
-    <jexxa.release.version>9.0.10</jexxa.release.version>
+    <jexxa.release.version>9.0.11</jexxa.release.version>
     <addend.version>2.0.4</addend.version>
     <activemq.artemis.client.version>2.55.0</activemq.artemis.client.version>
     <postgres.version>42.7.13</postgres.version>
@@ -63,7 +63,7 @@
     <maven.deploy.plugin>3.1.4</maven.deploy.plugin>
     <maven.failsafe.plugin>3.5.6</maven.failsafe.plugin>
     <maven.install.plugin>3.1.4</maven.install.plugin>
-    <maven.jar.plugin>3.5.0</maven.jar.plugin>
+    <maven.jar.plugin>3.5.1</maven.jar.plugin>
     <maven.resources.plugin>3.5.0</maven.resources.plugin>
     <maven.site.plugin>3.22.0</maven.site.plugin>
     <maven.surefire.plugin>3.5.6</maven.surefire.plugin>
@@ -74,7 +74,7 @@
     <maven.javadoc.plugin>3.2.0</maven.javadoc.plugin>
     <maven.versions.plugin>2.21.0</maven.versions.plugin>
     <maven.build.helper.version>3.6.1</maven.build.helper.version>
-    <maven.jib.plugin>3.5.1</maven.jib.plugin>
+    <maven.jib.plugin>3.5.2</maven.jib.plugin>
     <maven.shade.plugin>3.6.2</maven.shade.plugin>
     <maven.exec.plugin>3.6.3</maven.exec.plugin>
 
