@@ -8,13 +8,19 @@ updates:
     # Check for updates once daily
     schedule:
       interval: "daily"
-      
+    cooldown: ## we trust ourselves ;-)
+      exclude:
+        - "io.jexxa.*"
+
   - package-ecosystem: "maven"
     directory: "/jexxa-blank-archetype/src/main/resources/archetype-resources"
     open-pull-requests-limit: 10
     # Check for updates once daily
     schedule:
       interval: "daily"
+    cooldown: ## we trust ourselves ;-)
+      exclude:
+        - "io.jexxa.*"
 
   - package-ecosystem: "maven"
     directory: "/jlegmed-blank-archetype/src/main/resources/archetype-resources"
@@ -22,6 +28,9 @@ updates:
     # Check for updates once daily
     schedule:
       interval: "daily"
+    cooldown: ## we trust ourselves ;-)
+      exclude:
+        - "io.jexxa.*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
