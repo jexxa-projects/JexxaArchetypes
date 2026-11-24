@@ -3,12 +3,12 @@
 #set( $symbol_escape = '\' )
 package ${package};
 
+import io.jexxa.adapters.rest.RESTfulRPCAdapter;
 import io.jexxa.core.JexxaMain;
-import io.jexxa.drivingadapter.rest.RESTfulRPCAdapter;
 
 public final class ${projectName}
 {
-    public static void main(String[] args)
+    public static void main()
     {
         var jexxaMain = new JexxaMain(${projectName}.class);
 
